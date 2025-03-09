@@ -1,11 +1,10 @@
+import "./globals.css"
 import type React from "react"
 import type { Metadata, Viewport } from "next"
 import { Inter } from "next/font/google"
-import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import ScrollToTop from "@/components/scroll-to-top"
 import { LocalBusiness } from "@/components/schema-org"
-import StyleReset from "@/components/style-reset"
 
 // Asegurarnos de que la fuente Inter se cargue correctamente y con los pesos adecuados
 const inter = Inter({
@@ -126,7 +125,6 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#01579B" />
       </head>
       <body className={`${inter.className} ${inter.variable} font-sans`}>
-        <StyleReset />
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <ScrollToTop />
           {/* Schema.org para SEO local */}
