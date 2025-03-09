@@ -151,6 +151,7 @@ export default function Header() {
     }
   }, [isMenuOpen])
 
+  // Modificar el array navItems para incluir solo las opciones solicitadas
   const navItems = [
     {
       title: "Institucional",
@@ -161,14 +162,6 @@ export default function Header() {
       ],
     },
     {
-      title: "Servicios",
-      links: [
-        { href: "/servicios/asesoramiento", text: "Asesoramiento" },
-        { href: "/servicios/capacitacion", text: "Capacitación" },
-        { href: "/servicios/beneficios", text: "Beneficios" },
-      ],
-    },
-    {
       title: "Capacitación",
       links: [
         { href: "/capacitacion/cursos", text: "Cursos" },
@@ -176,54 +169,10 @@ export default function Header() {
         { href: "/capacitacion/webinars", text: "Webinars" },
       ],
     },
-    {
-      title: "Comercio",
-      links: [
-        { href: "/comercio/directorio", text: "Directorio" },
-        { href: "/comercio/promociones", text: "Promociones" },
-        { href: "/comercio/novedades", text: "Novedades" },
-      ],
-    },
-    {
-      title: "Información",
-      links: [
-        { href: "/informacion/estadisticas", text: "Estadísticas" },
-        { href: "/informacion/informes", text: "Informes" },
-        { href: "/informacion/publicaciones", text: "Publicaciones" },
-      ],
-    },
   ]
 
   return (
     <>
-      {/* Top Bar */}
-      <div className="bg-primary text-white py-1 px-4 text-xs hidden md:block">
-        <div className="container mx-auto flex justify-between items-center">
-          <div className="flex space-x-4">
-            <Link href="#" className="hover:text-secondary focus:text-secondary focus:outline-none">
-              Institucional
-            </Link>
-            <Link href="#" className="hover:text-secondary focus:text-secondary focus:outline-none">
-              Servicios
-            </Link>
-            <Link href="#" className="hover:text-secondary focus:text-secondary focus:outline-none">
-              Capacitación
-            </Link>
-            <Link href="#" className="hover:text-secondary focus:text-secondary focus:outline-none">
-              Comercio
-            </Link>
-          </div>
-          <div className="flex space-x-4">
-            <Link href="#" className="hover:text-secondary focus:text-secondary focus:outline-none">
-              Contacto
-            </Link>
-            <Link href="#" className="hover:text-secondary focus:text-secondary focus:outline-none">
-              Ingresar
-            </Link>
-          </div>
-        </div>
-      </div>
-
       {/* Header */}
       <header
         className={`sticky top-0 z-50 bg-gradient-to-r from-primary to-secondary py-4 px-4 transition-shadow ${
