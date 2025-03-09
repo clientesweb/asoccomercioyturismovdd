@@ -5,6 +5,7 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import ScrollToTop from "@/components/scroll-to-top"
 import { LocalBusiness } from "@/components/schema-org"
+import StyleReset from "@/components/style-reset"
 
 // Asegurarnos de que la fuente Inter se cargue correctamente y con los pesos adecuados
 const inter = Inter({
@@ -94,7 +95,6 @@ export const metadata: Metadata = {
     },
   },
   category: "tourism",
-    generator: 'v0.dev'
 }
 
 // Configuración de viewport y tema
@@ -126,6 +126,7 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#01579B" />
       </head>
       <body className={`${inter.className} ${inter.variable} font-sans`}>
+        <StyleReset />
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <ScrollToTop />
           {/* Schema.org para SEO local */}
@@ -137,6 +138,3 @@ export default function RootLayout({
   )
 }
 
-
-
-import './globals.css'
