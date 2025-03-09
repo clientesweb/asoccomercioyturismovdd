@@ -7,6 +7,8 @@ try {
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -15,11 +17,22 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
+    domains: ['hebbkx1anhila5yf.public.blob.vercel-storage.com', 'vivivilladeldique.org'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
   },
   experimental: {
     webpackBuildWorker: true,
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
+  },
+  // Asegurarse de que Next.js maneje correctamente los estilos
+  webpack(config) {
+    return config;
   },
 }
 
@@ -46,3 +59,4 @@ function mergeConfig(nextConfig, userConfig) {
 }
 
 export default nextConfig
+
