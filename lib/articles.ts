@@ -123,62 +123,62 @@ export const articles: Article[] = [
       "analisis-sector-turistico-villa-dique-2025",
     ],
   },
-    {
-    "slug": "asociacion-lanza-capacitaciones-para-turismo-comercio",
-    "title": "La Asociación lanza un programa de capacitaciones para potenciar el turismo y comercio local",
-    "date": "9 de marzo de 2025",
-    "category": "COMUNICADOS DE PRENSA",
-    "author": "Equipo de Comunicación ACTyA",
-    "readTime": "5 minutos",
-    "image": "/placeholder.svg?height=600&width=1200",
-    "content": `
-      <p>La Asociación de Comercio y Turismo de Villa del Dique sigue impulsando el crecimiento del sector con un nuevo <strong>programa de capacitaciones</strong>, dirigido a emprendedores, comerciantes y alojamientos.</p>
+  {
+    slug: "asociacion-lanza-capacitaciones-para-turismo-comercio",
+    title: "La Asociación lanza un programa de capacitaciones para potenciar el turismo y comercio local",
+    date: "9 de marzo de 2025",
+    category: "COMUNICADOS DE PRENSA",
+    author: "Equipo de Comunicación ACTyA",
+    readTime: "5 minutos",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2.jpg-aIECL47jNFbR4BbMKz2iHb0BFPJYHx.jpeg",
+    content: `
+    <p>La Asociación de Comercio y Turismo de Villa del Dique sigue impulsando el crecimiento del sector con un nuevo <strong>programa de capacitaciones</strong>, dirigido a emprendedores, comerciantes y alojamientos.</p>
 
-      <p>El objetivo de estas iniciativas es brindar herramientas estratégicas para mejorar la atención al cliente, potenciar los negocios y fomentar el crecimiento del turismo y el comercio en la región.</p>
+    <p>El objetivo de estas iniciativas es brindar herramientas estratégicas para mejorar la atención al cliente, potenciar los negocios y fomentar el crecimiento del turismo y el comercio en la región.</p>
 
-      <h2>Capacitación: Calidad Humana al Servicio del Cliente</h2>
+    <h2>Capacitación: Calidad Humana al Servicio del Cliente</h2>
 
-      <p>Con el fin de mejorar la atención y fortalecer la relación con los clientes, la Asociación presenta este taller que busca dotar a los comerciantes de habilidades esenciales para garantizar un servicio de calidad y fomentar la <strong>lealtad y satisfacción</strong> del cliente.</p>
+    <p>Con el fin de mejorar la atención y fortalecer la relación con los clientes, la Asociación presenta este taller que busca dotar a los comerciantes de habilidades esenciales para garantizar un servicio de calidad y fomentar la <strong>lealtad y satisfacción</strong> del cliente.</p>
 
-      <ul>
-        <li><strong>Modalidad:</strong> Teórico - Práctico, Presencial</li>
-        <li><strong>Destinado a:</strong> Público general</li>
-        <li><strong>Duración:</strong> 8 horas (4 encuentros de 2 horas cada uno)</li>
-      </ul>
+    <ul>
+      <li><strong>Modalidad:</strong> Teórico - Práctico, Presencial</li>
+      <li><strong>Destinado a:</strong> Público general</li>
+      <li><strong>Duración:</strong> 8 horas (4 encuentros de 2 horas cada uno)</li>
+    </ul>
 
-      <p>Desde la Asociación enfatizaron que mejorar la atención al cliente es clave para consolidar a Villa del Dique como un destino turístico de referencia.</p>
+    <p>Desde la Asociación enfatizaron que mejorar la atención al cliente es clave para consolidar a Villa del Dique como un destino turístico de referencia.</p>
 
-      <h2>Taller: Crea tu propio emprendimiento desde cero</h2>
+    <h2>Taller: Crea tu propio emprendimiento desde cero</h2>
 
-      <p>Este taller está diseñado para aquellos que desean transformar sus ideas en negocios viables. Los participantes recibirán conocimientos fundamentales sobre planificación estratégica, herramientas digitales y desarrollo comercial.</p>
+    <p>Este taller está diseñado para aquellos que desean transformar sus ideas en negocios viables. Los participantes recibirán conocimientos fundamentales sobre planificación estratégica, herramientas digitales y desarrollo comercial.</p>
 
-      <ul>
-        <li><strong>Planificación y validación de ideas</strong></li>
-        <li><strong>Estrategias para el crecimiento sostenible</strong></li>
-        <li><strong>Desarrollo de un plan de acción efectivo</strong></li>
-      </ul>
+    <ul>
+      <li><strong>Planificación y validación de ideas</strong></li>
+      <li><strong>Estrategias para el crecimiento sostenible</strong></li>
+      <li><strong>Desarrollo de un plan de acción efectivo</strong></li>
+    </ul>
 
-      <p>Se trata de una capacitación interactiva y práctica, que permitirá a los emprendedores salir con un proyecto consolidado y una hoja de ruta clara hacia el éxito.</p>
+    <p>Se trata de una capacitación interactiva y práctica, que permitirá a los emprendedores salir con un proyecto consolidado y una hoja de ruta clara hacia el éxito.</p>
 
-      <h2>Un compromiso con el desarrollo local</h2>
+    <h2>Un compromiso con el desarrollo local</h2>
 
-      <p>Desde la Asociación de Comercio y Turismo de Villa del Dique destacaron la importancia de estas capacitaciones como parte de un plan integral para potenciar la economía local.</p>
+    <p>Desde la Asociación de Comercio y Turismo de Villa del Dique destacaron la importancia de estas capacitaciones como parte de un plan integral para potenciar la economía local.</p>
 
-      <p><em>"Estamos convencidos de que la formación continua es una herramienta clave para impulsar el turismo y el comercio en Villa del Dique. Con estos talleres, buscamos proporcionar conocimientos prácticos que generen un impacto positivo y sostenible en la comunidad"</em>, expresaron desde la dirigencia de la Asociación.</p>
+    <p><em>"Estamos convencidos de que la formación continua es una herramienta clave para impulsar el turismo y el comercio en Villa del Dique. Con estos talleres, buscamos proporcionar conocimientos prácticos que generen un impacto positivo y sostenible en la comunidad"</em>, expresaron desde la dirigencia de la Asociación.</p>
 
-      <p>Además, enfatizaron que este es solo el <strong>primer paso de una estrategia a largo plazo</strong>, con el objetivo de posicionar a Villa del Dique en una <strong>nueva era digital y comercial</strong>.</p>
+    <p>Además, enfatizaron que este es solo el <strong>primer paso de una estrategia a largo plazo</strong>, con el objetivo de posicionar a Villa del Dique en una <strong>nueva era digital y comercial</strong>.</p>
 
-      <h2>Inscripciones abiertas</h2>
+    <h2>Inscripciones abiertas</h2>
 
-      <p>Los interesados en participar pueden obtener más información y registrarse en los siguientes enlaces:</p>
+    <p>Los interesados en participar pueden inscribirse directamente en nuestra página de capacitaciones:</p>
 
-      <p>🌐 <a href="http://www.villadeldique.com.ar">www.villadeldique.com.ar</a> | <a href="http://www.villadeldique.org">www.villadeldique.org</a></p>
-    `,
-    "tags": ["Capacitación", "Turismo", "Comercio", "Emprendedores", "Atención al Cliente"],
-    "relatedNews": [
+    <p>🌐 <a href="/capacitacion">Inscripción a Capacitaciones</a></p>
+  `,
+    tags: ["Capacitación", "Turismo", "Comercio", "Emprendedores", "Atención al Cliente"],
+    relatedNews: [
       "asamblea-general-turismo-participacion-asociacion",
       "turismo-villa-dique-crecio-interanual",
-      "analisis-sector-turistico-villa-dique-2025"
+      "analisis-sector-turistico-villa-dique-2025",
     ],
   },
   {
