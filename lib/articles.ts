@@ -124,37 +124,35 @@ export const articles: Article[] = [
     ],
   },
   {
-    slug: "asociacion-renovo-autoridades-comisiones-asesoras",
-    title: "La Asociación renovó las autoridades de sus comisiones asesoras de Turismo y Comercio",
-    date: "7 de marzo de 2025",
-    category: "COMUNICADOS DE PRENSA",
-    author: "Equipo de Comunicación ACTyA",
-    readTime: "5 minutos",
-    image: "/placeholder.svg?height=600&width=1200",
-    content: `
-      <p>Los cambios se concretaron en el marco de encuentros que contaron con la participación del presidente de la Entidad, Mario González.</p>
+    "slug": "capacitaciones-capeca-emprendedores-comerciantes",
+    "title": "CAPECA lanza nuevas capacitaciones para emprendedores y comerciantes",
+    "date": "11 de marzo de 2025",
+    "category": "CAPACITACIONES",
+    "author": "Equipo de Comunicación CAPECA",
+    "readTime": "5 minutos",
+    "image": "/placeholder.svg?height=600&width=1200",
+    "content": `
+      <p>Las inscripciones ya están abiertas para los talleres de formación destinados a emprendedores, comerciantes y alojamientos, dictados por profesionales en la materia.</p>
       
-      <p>La Asociación de Comercio y Turismo de Villa del Dique renovó las autoridades de sus comisiones asesoras de Turismo y Comercio, en el marco de encuentros que contaron con la participación del presidente de la Entidad, Mario González.</p>
+      <p>La Asociación CAPECA anunció la apertura de inscripciones para su programa de capacitaciones, dirigido a fortalecer el desarrollo de emprendimientos y la calidad en la atención al cliente. Estas iniciativas están diseñadas para brindar herramientas clave a quienes buscan mejorar su negocio y potenciar sus habilidades.</p>
       
-      <p>Durante la reunión de la Comisión de Turismo, que tuvo lugar el pasado jueves 20 de febrero, se designó como presidente a Juan Martín Barreiro, mientras que Guillermo Ambrogi y Rodrigo Pérez Graziano fueron elegidos como vicepresidentes primero y segundo, respectivamente.</p>
+      <p>Uno de los talleres destacados es "Calidad Humana al Servicio del Cliente", que tiene como objetivo proporcionar a los comerciantes conocimientos esenciales para optimizar la experiencia del cliente y fomentar su fidelización. Esta capacitación, de modalidad teórico-práctica y presencial, tendrá una duración de 8 horas, distribuidas en 4 encuentros de 2 horas cada uno.</p>
       
-      <p>En tanto, en la Comisión de Comercio, cuyo encuentro se realizó el viernes 21 de febrero, se designó como presidente a Marcelo Elizondo, en tanto que Enrique Mantilla y Ariel Schale fueron elegidos como vicepresidentes primero y segundo, respectivamente.</p>
+      <p>Asimismo, se dictará el taller "Crea Tu Propio Emprendimiento Desde Cero", orientado a quienes desean iniciar un negocio desde la idea inicial hasta su implementación efectiva. Esta capacitación busca que los participantes desarrollen un proyecto viable con una hoja de ruta clara hacia el éxito.</p>
       
-      <p>En ambas reuniones, el presidente de la Asociación, Mario González, destacó la importancia de estas comisiones para el trabajo de la Entidad y agradeció a las autoridades salientes por su labor.</p>
+      <p>Desde CAPECA destacan la importancia de estas capacitaciones para el crecimiento del sector comercial y turístico de Villa del Dique, brindando herramientas innovadoras y estrategias de mejora continua.</p>
       
-      <p>"Las comisiones asesoras son fundamentales para el trabajo de la Asociación, ya que nos permiten contar con la visión y experiencia de especialistas en cada área, lo que enriquece nuestro análisis y propuestas", señaló González.</p>
+      <p>"Nuestro objetivo es acompañar a los emprendedores y comerciantes en su camino hacia el crecimiento, brindándoles conocimientos y recursos para que puedan desarrollar negocios sólidos y sostenibles", afirmaron desde la organización.</p>
       
-      <p>Asimismo, el titular de la Asociación expresó su confianza en que las nuevas autoridades de ambas comisiones continuarán trabajando con el mismo compromiso y dedicación que sus predecesores.</p>
+      <p>Las capacitaciones están abiertas al público general y se desarrollarán en modalidad presencial. Para más información e inscripciones, los interesados pueden visitar los sitios oficiales de Villa del Dique.</p>
       
-      <p>Por su parte, los flamantes presidentes de las comisiones agradecieron la confianza depositada en ellos y se comprometieron a trabajar para fortalecer el rol de Villa del Dique como destino turístico y comercial.</p>
-      
-      <p>La Comisión de Turismo tiene como objetivo analizar la problemática del sector turístico y proponer políticas que favorezcan su desarrollo, mientras que la Comisión de Comercio se enfoca en el análisis de las políticas comerciales y la promoción del comercio local.</p>
+      <p>📌 <a href="http://www.villadeldique.com.ar">www.villadeldique.com.ar</a> | <a href="http://www.villadeldique.org">www.villadeldique.org</a></p>
     `,
-    tags: ["Turismo", "Comercio", "Autoridades", "Comisiones"],
-    relatedNews: [
-      "asamblea-general-turismo-participacion-asociacion",
-      "turismo-villa-dique-crecio-interanual",
-      "analisis-sector-turistico-villa-dique-2025",
+    "tags": ["Capacitaciones", "Emprendimiento", "Comercio", "Turismo"],
+    "relatedNews": [
+      "nuevas-herramientas-para-emprendedores-en-villa-dique",
+      "fortalecimiento-del-comercio-local-con-capacitaciones",
+     "villa-dique-apuesta-al-desarrollo-turistico-y-comercial"
     ],
   },
   {
