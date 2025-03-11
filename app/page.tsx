@@ -406,6 +406,80 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Capacitaciones Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Programa de Capacitaciones</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              Potenciamos el turismo y comercio local a través de capacitaciones diseñadas para emprendedores,
+              comerciantes y alojamientos.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="bg-white rounded-xl shadow-sm overflow-hidden transform transition-transform hover:scale-105">
+              <div className="relative h-48">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/calidad-humana-al-serviciocliente.jpg-OZveRZISFZ1nZKGru4wWMlucsppc1R.jpeg"
+                  alt="Calidad Humana al Servicio del Cliente"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Calidad Humana al Servicio del Cliente</h3>
+                <p className="text-gray-600 mb-4">
+                  Aprende a ofrecer una experiencia de atención excepcional que fomente la lealtad y satisfacción del
+                  cliente.
+                </p>
+                <Link
+                  href="/capacitacion"
+                  className="inline-flex items-center text-primary hover:text-primary/80 transition-colors"
+                >
+                  Ver detalles
+                  <ChevronRight className="h-4 w-4 ml-1" />
+                </Link>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-sm overflow-hidden transform transition-transform hover:scale-105">
+              <div className="relative h-48">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/crea-tu-emprendimiento-desde-cero.jpg-vQxYkOFtQNYgidTdC4Ehr7jKprU5mJ.jpeg"
+                  alt="Crea tu propio emprendimiento desde cero"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Crea tu propio emprendimiento desde cero</h3>
+                <p className="text-gray-600 mb-4">
+                  Convierte tus ideas en proyectos viables con conocimientos clave sobre planificación y estrategias de
+                  negocio.
+                </p>
+                <Link
+                  href="/capacitacion"
+                  className="inline-flex items-center text-primary hover:text-primary/80 transition-colors"
+                >
+                  Ver detalles
+                  <ChevronRight className="h-4 w-4 ml-1" />
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-10">
+            <Link
+              href="/capacitacion"
+              className="inline-flex items-center justify-center rounded-full border-2 border-primary text-primary px-8 py-3 text-sm font-medium hover:bg-primary hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+            >
+              Ver todas las capacitaciones
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Main Content */}
       <main className="flex-grow bg-gray-50 py-12">
         {/* About Us Sections */}
