@@ -24,6 +24,8 @@ export default function InscripcionForm({ capacitaciones, selectedCapacitacion }
     capacitaciones: [] as string[],
     localidad: "",
     ocupacion: "",
+    trabajaEnVillaDique: "no", // Add this line
+    nombreComercio: "", // Add this line
     comentarios: "",
   })
   const [errors, setErrors] = useState<Record<string, string>>({})
@@ -112,6 +114,10 @@ export default function InscripcionForm({ capacitaciones, selectedCapacitacion }
       newErrors.ocupacion = "La ocupación es requerida"
     }
 
+    if (formData.trabajaEnVillaDique === "si" && !formData.nombreComercio.trim()) {
+      newErrors.nombreComercio = "El nombre del comercio es requerido"
+    }
+
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
   }
@@ -142,6 +148,8 @@ export default function InscripcionForm({ capacitaciones, selectedCapacitacion }
 *Teléfono:* ${formData.telefono}
 *Localidad:* ${formData.localidad}
 *Ocupación:* ${formData.ocupacion}
+*Trabaja en Villa del Dique:* ${formData.trabajaEnVillaDique === "si" ? "Sí" : "No"}
+${formData.trabajaEnVillaDique === "si" ? `*Comercio:* ${formData.nombreComercio}` : ""}
 *Comentarios:* ${formData.comentarios || "No se incluyeron comentarios"}
   `.trim()
 
@@ -171,6 +179,8 @@ export default function InscripcionForm({ capacitaciones, selectedCapacitacion }
         capacitaciones: [],
         localidad: "",
         ocupacion: "",
+        trabajaEnVillaDique: "no",
+        nombreComercio: "",
         comentarios: "",
       })
       setIsSuccess(false)
@@ -325,6 +335,62 @@ export default function InscripcionForm({ capacitaciones, selectedCapacitacion }
             />
             {errors.ocupacion && <p className="text-red-500 text-xs">{errors.ocupacion}</p>}
           </div>
+
+          <div className="space-y-2 md:col-span-2">
+            <label className="block text-sm font-medium text-gray-700">
+              ¿Trabajas en algún comercio de Villa del Dique? <span className="text-red-500">*</span>
+            </label>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="flex items-center">
+                <input
+                  type="radio"
+                  id="trabajaEnVillaDique-si"
+                  name="trabajaEnVillaDique"
+                  value="si"
+                  checked={formData.trabajaEnVillaDique === "si"}
+                  onChange={handleChange}
+                  className="h-4 w-4 text-primary border-gray-300 focus:ring-primary"
+                />
+                <label htmlFor="trabajaEnVillaDique-si" className="ml-2 block text-sm text-gray-700">
+                  Sí
+                </label>
+              </div>
+              <div className="flex items-center">
+                <input
+                  type="radio"
+                  id="trabajaEnVillaDique-no"
+                  name="trabajaEnVillaDique"
+                  value="no"
+                  checked={formData.trabajaEnVillaDique === "no"}
+                  onChange={handleChange}
+                  className="h-4 w-4 text-primary border-gray-300 focus:ring-primary"
+                />
+                <label htmlFor="trabajaEnVillaDique-no" className="ml-2 block text-sm text-gray-700">
+                  No
+                </label>
+              </div>
+            </div>
+          </div>
+
+          {formData.trabajaEnVillaDique === "si" && (
+            <div className="space-y-2 md:col-span-2">
+              <label htmlFor="nombreComercio" className="block text-sm font-medium text-gray-700">
+                Nombre del comercio <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="text"
+                id="nombreComercio"
+                name="nombreComercio"
+                value={formData.nombreComercio}
+                onChange={handleChange}
+                className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:outline-none ${
+                  errors.nombreComercio ? "border-red-500" : "border-gray-300"
+                }`}
+                placeholder="Nombre del comercio donde trabajas"
+              />
+              {errors.nombreComercio && <p className="text-red-500 text-xs">{errors.nombreComercio}</p>}
+            </div>
+          )}
 
           <div className="space-y-2 md:col-span-2">
             <label htmlFor="comentarios" className="block text-sm font-medium text-gray-700">
