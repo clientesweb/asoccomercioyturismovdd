@@ -123,36 +123,62 @@ export const articles: Article[] = [
       "analisis-sector-turistico-villa-dique-2025",
     ],
   },
-  {
-    "slug": "capacitaciones-capeca-emprendedores-comerciantes",
-    "title": "CAPECA lanza nuevas capacitaciones para emprendedores y comerciantes",
-    "date": "11 de marzo de 2025",
-    "category": "CAPACITACIONES",
-    "author": "Equipo de Comunicación CAPECA",
+    {
+    "slug": "asociacion-lanza-capacitaciones-para-turismo-comercio",
+    "title": "La Asociación lanza un programa de capacitaciones para potenciar el turismo y comercio local",
+    "date": "9 de marzo de 2025",
+    "category": "COMUNICADOS DE PRENSA",
+    "author": "Equipo de Comunicación ACTyA",
     "readTime": "5 minutos",
     "image": "/placeholder.svg?height=600&width=1200",
     "content": `
-      <p>Las inscripciones ya están abiertas para los talleres de formación destinados a emprendedores, comerciantes y alojamientos, dictados por profesionales en la materia.</p>
-      
-      <p>La Asociación CAPECA anunció la apertura de inscripciones para su programa de capacitaciones, dirigido a fortalecer el desarrollo de emprendimientos y la calidad en la atención al cliente. Estas iniciativas están diseñadas para brindar herramientas clave a quienes buscan mejorar su negocio y potenciar sus habilidades.</p>
-      
-      <p>Uno de los talleres destacados es "Calidad Humana al Servicio del Cliente", que tiene como objetivo proporcionar a los comerciantes conocimientos esenciales para optimizar la experiencia del cliente y fomentar su fidelización. Esta capacitación, de modalidad teórico-práctica y presencial, tendrá una duración de 8 horas, distribuidas en 4 encuentros de 2 horas cada uno.</p>
-      
-      <p>Asimismo, se dictará el taller "Crea Tu Propio Emprendimiento Desde Cero", orientado a quienes desean iniciar un negocio desde la idea inicial hasta su implementación efectiva. Esta capacitación busca que los participantes desarrollen un proyecto viable con una hoja de ruta clara hacia el éxito.</p>
-      
-      <p>Desde CAPECA destacan la importancia de estas capacitaciones para el crecimiento del sector comercial y turístico de Villa del Dique, brindando herramientas innovadoras y estrategias de mejora continua.</p>
-      
-      <p>"Nuestro objetivo es acompañar a los emprendedores y comerciantes en su camino hacia el crecimiento, brindándoles conocimientos y recursos para que puedan desarrollar negocios sólidos y sostenibles", afirmaron desde la organización.</p>
-      
-      <p>Las capacitaciones están abiertas al público general y se desarrollarán en modalidad presencial. Para más información e inscripciones, los interesados pueden visitar los sitios oficiales de Villa del Dique.</p>
-      
-      <p>📌 <a href="http://www.villadeldique.com.ar">www.villadeldique.com.ar</a> | <a href="http://www.villadeldique.org">www.villadeldique.org</a></p>
+      <p>La Asociación de Comercio y Turismo de Villa del Dique sigue impulsando el crecimiento del sector con un nuevo <strong>programa de capacitaciones</strong>, dirigido a emprendedores, comerciantes y alojamientos.</p>
+
+      <p>El objetivo de estas iniciativas es brindar herramientas estratégicas para mejorar la atención al cliente, potenciar los negocios y fomentar el crecimiento del turismo y el comercio en la región.</p>
+
+      <h2>Capacitación: Calidad Humana al Servicio del Cliente</h2>
+
+      <p>Con el fin de mejorar la atención y fortalecer la relación con los clientes, la Asociación presenta este taller que busca dotar a los comerciantes de habilidades esenciales para garantizar un servicio de calidad y fomentar la <strong>lealtad y satisfacción</strong> del cliente.</p>
+
+      <ul>
+        <li><strong>Modalidad:</strong> Teórico - Práctico, Presencial</li>
+        <li><strong>Destinado a:</strong> Público general</li>
+        <li><strong>Duración:</strong> 8 horas (4 encuentros de 2 horas cada uno)</li>
+      </ul>
+
+      <p>Desde la Asociación enfatizaron que mejorar la atención al cliente es clave para consolidar a Villa del Dique como un destino turístico de referencia.</p>
+
+      <h2>Taller: Crea tu propio emprendimiento desde cero</h2>
+
+      <p>Este taller está diseñado para aquellos que desean transformar sus ideas en negocios viables. Los participantes recibirán conocimientos fundamentales sobre planificación estratégica, herramientas digitales y desarrollo comercial.</p>
+
+      <ul>
+        <li><strong>Planificación y validación de ideas</strong></li>
+        <li><strong>Estrategias para el crecimiento sostenible</strong></li>
+        <li><strong>Desarrollo de un plan de acción efectivo</strong></li>
+      </ul>
+
+      <p>Se trata de una capacitación interactiva y práctica, que permitirá a los emprendedores salir con un proyecto consolidado y una hoja de ruta clara hacia el éxito.</p>
+
+      <h2>Un compromiso con el desarrollo local</h2>
+
+      <p>Desde la Asociación de Comercio y Turismo de Villa del Dique destacaron la importancia de estas capacitaciones como parte de un plan integral para potenciar la economía local.</p>
+
+      <p><em>"Estamos convencidos de que la formación continua es una herramienta clave para impulsar el turismo y el comercio en Villa del Dique. Con estos talleres, buscamos proporcionar conocimientos prácticos que generen un impacto positivo y sostenible en la comunidad"</em>, expresaron desde la dirigencia de la Asociación.</p>
+
+      <p>Además, enfatizaron que este es solo el <strong>primer paso de una estrategia a largo plazo</strong>, con el objetivo de posicionar a Villa del Dique en una <strong>nueva era digital y comercial</strong>.</p>
+
+      <h2>Inscripciones abiertas</h2>
+
+      <p>Los interesados en participar pueden obtener más información y registrarse en los siguientes enlaces:</p>
+
+      <p>🌐 <a href="http://www.villadeldique.com.ar">www.villadeldique.com.ar</a> | <a href="http://www.villadeldique.org">www.villadeldique.org</a></p>
     `,
-    "tags": ["Capacitaciones", "Emprendimiento", "Comercio", "Turismo"],
+    "tags": ["Capacitación", "Turismo", "Comercio", "Emprendedores", "Atención al Cliente"],
     "relatedNews": [
-      "nuevas-herramientas-para-emprendedores-en-villa-dique",
-      "fortalecimiento-del-comercio-local-con-capacitaciones",
-     "villa-dique-apuesta-al-desarrollo-turistico-y-comercial"
+      "asamblea-general-turismo-participacion-asociacion",
+      "turismo-villa-dique-crecio-interanual",
+      "analisis-sector-turistico-villa-dique-2025"
     ],
   },
   {
