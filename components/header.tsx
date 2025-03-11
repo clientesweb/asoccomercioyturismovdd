@@ -164,9 +164,10 @@ export default function Header() {
     {
       title: "Capacitación",
       links: [
+        { href: "/capacitacion", text: "Programa de Capacitaciones" },
+        { href: "/capacitacion#inscripcion", text: "Inscripción" },
         { href: "/capacitacion/cursos", text: "Cursos" },
         { href: "/capacitacion/seminarios", text: "Seminarios" },
-        { href: "/capacitacion/webinars", text: "Webinars" },
       ],
     },
   ]
