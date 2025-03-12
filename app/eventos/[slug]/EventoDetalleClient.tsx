@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { useParams, useRouter } from "next/navigation"
+import { useRouter } from "next/navigation"
 import {
   ArrowLeft,
   Calendar,
@@ -18,23 +18,26 @@ import {
   User,
   Tag,
   MessageCircle,
+  Phone,
   Ticket,
 } from "lucide-react"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { getEventBySlug, getRelatedEvents } from "@/lib/events"
 
-export default function EventoDetalleClient() {
-  const params = useParams()
+interface EventoDetalleClientProps {
+  slug: string
+}
+
+export default function EventoDetalleClient({ slug }: EventoDetalleClientProps) {
   const router = useRouter()
-  const slug = params.slug as string
   const [evento, setEvento] = useState<any>(null)
   const [relatedEvents, setRelatedEvents] = useState<any[]>([])
   const [isShareMenuOpen, setIsShareMenuOpen] = useState(false)
 
   useEffect(() => {
     // Buscar el evento por slug
-    const eventoEncontrado = getEventBySlug(slug as string)
+    const eventoEncontrado = getEventBySlug(slug)
 
     if (eventoEncontrado) {
       setEvento(eventoEncontrado)
@@ -289,6 +292,38 @@ export default function EventoDetalleClient() {
                     )}
                   </div>
                 </div>
+              </div>
+
+              {/* Contacto */}
+              <div className="bg-white rounded-xl shadow-sm p-6 mb-6">
+                <h2 className="text-xl font-bold text-gray-900 mb-4">Contacto</h2>
+                <p className="text-gray-600 mb-4">
+                  Para más información sobre este evento, contacta a la Asociación de Comercio, Turismo y Afines de
+                  Villa del Dique:
+                </p>
+                <ul className="space-y-3">
+                  <li className="flex items-center">
+                    <MapPin className="h-5 w-5 text-secondary mr-3" />
+                    <span className="text-gray-600">Formosa 236, Barrio Comercial, Villa del Dique</span>
+                  </li>
+                  <li className="flex items-center">
+                    <Phone className="h-5 w-5 text-secondary mr-3" />
+                    <a href="tel:+5493546404083" className="text-gray-600 hover:text-primary">
+                      3546 404083
+                    </a>
+                  </li>
+                  <li className="flex items-center">
+                    <MessageCircle className="h-5 w-5 text-secondary mr-3" />
+                    <a
+                      href="https://wa.me/5493546404083"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-600 hover:text-primary"
+                    >
+                      WhatsApp
+                    </a>
+                  </li>
+                </ul>
               </div>
 
               {/* Eventos relacionados */}
