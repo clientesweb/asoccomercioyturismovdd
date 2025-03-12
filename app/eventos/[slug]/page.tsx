@@ -14,7 +14,8 @@ export default function EventoDetallePage({ params }: { params: { slug: string }
     notFound()
   }
 
-  return <EventoDetalleClient />
+  // Pasamos el slug al componente cliente en lugar de intentar pasar todo el objeto evento
+  return <EventoDetalleClient slug={slug} />
 }
 
 // Generar metadatos dinámicos para SEO
