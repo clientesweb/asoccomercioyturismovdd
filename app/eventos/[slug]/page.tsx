@@ -10,12 +10,14 @@ export default function EventoDetallePage({ params }: { params: { slug: string }
   // Verificar si existe el evento
   const evento = getEventBySlug(slug)
 
+  // Si no se encuentra el evento, mostrar la página 404
   if (!evento) {
     notFound()
   }
 
-  // Pasamos el slug al componente cliente
-  return <EventoDetalleClient slug={slug} />
+  // Pasamos el evento directamente al componente cliente en lugar del slug
+  // Esto evita tener que volver a buscar el evento en el cliente
+  return <EventoDetalleClient evento={evento} />
 }
 
 // Generar metadatos dinámicos para SEO
