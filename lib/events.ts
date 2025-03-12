@@ -239,6 +239,7 @@ export function getUpcomingEvents(count?: number): Event[] {
 
 // Función para obtener un evento por su slug
 export function getEventBySlug(slug: string): Event | undefined {
+  // Buscar el evento directamente en el array de eventos
   return events.find((event) => event.slug === slug)
 }
 
