@@ -1,7 +1,6 @@
+import EventoDetalleClient from "./EventoDetalleClient"
 import { getEventBySlug } from "@/lib/events"
 import { notFound } from "next/navigation"
-import ViernesPeatonales from "./viernes-peatonales"
-import FestivalJineteadaFolclore from "./festival-jineteada-folclore"
 
 export const dynamicParams = true
 
@@ -15,17 +14,7 @@ export default function EventoDetallePage({ params }: { params: { slug: string }
     notFound()
   }
 
-  // Renderizar páginas específicas para los dos eventos
-  if (slug === "viernes-peatonales") {
-    return <ViernesPeatonales />
-  }
-
-  if (slug === "festival-jineteada-folclore") {
-    return <FestivalJineteadaFolclore />
-  }
-
-  // Si por alguna razón llegamos aquí, mostrar 404
-  return notFound()
+  return <EventoDetalleClient />
 }
 
 // Generar metadatos dinámicos para SEO
