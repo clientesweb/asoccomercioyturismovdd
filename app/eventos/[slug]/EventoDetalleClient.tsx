@@ -39,6 +39,9 @@ export default function EventoDetalleClient({ slug }: EventoDetalleClientProps) 
     // Buscar el evento por slug
     const eventoEncontrado = getEventBySlug(slug)
 
+    console.log("Slug recibido:", slug)
+    console.log("Evento encontrado:", eventoEncontrado)
+
     if (eventoEncontrado) {
       setEvento(eventoEncontrado)
 
@@ -48,8 +51,13 @@ export default function EventoDetalleClient({ slug }: EventoDetalleClientProps) 
         setRelatedEvents(related)
       }
     } else {
-      // Si no se encuentra el evento, redirigir a la página de eventos
-      router.push("/eventos")
+      // Si no se encuentra el evento, mostrar un mensaje en la consola
+      console.error(`No se encontró ningún evento con el slug: ${slug}`)
+
+      // Opcional: redirigir después de un tiempo para dar tiempo a que los logs se muestren
+      setTimeout(() => {
+        router.push("/eventos")
+      }, 1000)
     }
   }, [slug, router])
 
