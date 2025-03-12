@@ -34,10 +34,10 @@ export default function EventosClientPage() {
               actividades organizados por la Asociación de Comercio y Turismo.
             </p>
             <Link
-              href="#"
+              href="#eventos"
               className="inline-flex items-center px-8 py-4 rounded-full border-2 border-white text-white hover:bg-white hover:text-primary transition-colors"
             >
-              Ver calendario de eventos
+              Ver eventos
               <span className="ml-2">→</span>
             </Link>
           </div>
@@ -57,69 +57,83 @@ export default function EventosClientPage() {
             />
           </div>
 
-          <h2 className="text-4xl font-bold text-primary mb-8">Eventos</h2>
+          <h2 className="text-4xl font-bold text-primary mb-8" id="eventos">
+            Eventos
+          </h2>
 
           {/* Lista de eventos */}
           <div className="grid gap-6">
-            {eventos.map((evento, index) => (
-              <div
-                key={index}
-                className="bg-gradient-to-br from-primary to-secondary rounded-3xl overflow-hidden p-8 text-white"
-              >
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-6 text-highlight">
-                      <div className="flex items-center">
-                        <Calendar className="w-5 h-5 mr-2" />
-                        <span>{evento.date}</span>
-                      </div>
-                      <div className="flex items-center">
-                        <MapPin className="w-5 h-5 mr-2" />
-                        <span>{evento.location}</span>
-                      </div>
-                      <div className="flex items-center">
-                        <Clock className="w-5 h-5 mr-2" />
-                        <span>{evento.time}</span>
-                      </div>
+            {/* Viernes Peatonales */}
+            <div className="bg-gradient-to-br from-primary to-secondary rounded-3xl overflow-hidden p-8 text-white">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-6 text-highlight">
+                    <div className="flex items-center">
+                      <Calendar className="w-5 h-5 mr-2" />
+                      <span>Todos los viernes de verano</span>
                     </div>
-                    <h3 className="text-2xl font-bold">{evento.title}</h3>
-                    <p className="text-white/80 line-clamp-2">
-                      {evento.description.split("</p>")[0].replace(/<\/?[^>]+(>|$)/g, "")}
-                    </p>
+                    <div className="flex items-center">
+                      <MapPin className="w-5 h-5 mr-2" />
+                      <span>Calle San Martín</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Clock className="w-5 h-5 mr-2" />
+                      <span>21:00 hs</span>
+                    </div>
                   </div>
-                  <div className="mt-4 md:mt-0">
-                    <Link
-                      href={`/eventos/${evento.slug}`}
-                      className="inline-flex items-center px-6 py-3 rounded-full border-2 border-white text-white hover:bg-white hover:text-primary transition-colors"
-                    >
-                      Ver evento
-                      <span className="ml-2">→</span>
-                    </Link>
-                  </div>
+                  <h3 className="text-2xl font-bold">Viernes Peatonales</h3>
+                  <p className="text-white/80 line-clamp-2">
+                    Durante el verano, la calle San Martín se convierte en peatonal todos los viernes a partir de las
+                    21:00 horas, ofreciendo una experiencia única para locales y turistas.
+                  </p>
+                </div>
+                <div className="mt-4 md:mt-0">
+                  <Link
+                    href="/eventos/viernes-peatonales"
+                    className="inline-flex items-center px-6 py-3 rounded-full border-2 border-white text-white hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-white"
+                  >
+                    Ver evento
+                    <span className="ml-2">→</span>
+                  </Link>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
 
-          {/* Paginación */}
-          <div className="mt-8 flex justify-center">
-            <nav className="flex space-x-2">
-              <a href="#" className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">
-                Anterior
-              </a>
-              <a href="#" className="px-4 py-2 bg-primary text-white rounded-lg">
-                1
-              </a>
-              <a href="#" className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">
-                2
-              </a>
-              <a href="#" className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">
-                3
-              </a>
-              <a href="#" className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">
-                Siguiente
-              </a>
-            </nav>
+            {/* Festival de Jineteada y Folclore */}
+            <div className="bg-gradient-to-br from-accent to-accent/80 rounded-3xl overflow-hidden p-8 text-white">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-6 text-highlight">
+                    <div className="flex items-center">
+                      <Calendar className="w-5 h-5 mr-2" />
+                      <span>15 y 16 de marzo de 2025</span>
+                    </div>
+                    <div className="flex items-center">
+                      <MapPin className="w-5 h-5 mr-2" />
+                      <span>Predio Los Eucaliptos</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Clock className="w-5 h-5 mr-2" />
+                      <span>12:00 hs</span>
+                    </div>
+                  </div>
+                  <h3 className="text-2xl font-bold">Festival de Jineteada y Folclore</h3>
+                  <p className="text-white/80 line-clamp-2">
+                    Villa del Dique se prepara para vivir una de las fiestas más tradicionales de la región: el Festival
+                    de Jineteada y Folclore.
+                  </p>
+                </div>
+                <div className="mt-4 md:mt-0">
+                  <Link
+                    href="/eventos/festival-jineteada-folclore"
+                    className="inline-flex items-center px-6 py-3 rounded-full border-2 border-white text-white hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-white"
+                  >
+                    Ver evento
+                    <span className="ml-2">→</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </main>
