@@ -67,15 +67,19 @@ function dateStringToTimestamp(dateString: string): number {
   return new Date(year, month, day).getTime()
 }
 
-// Keep only these two events in the events array and remove all others
+// Update the events array to only include these two events with detailed information
 export const events: Event[] = [
   {
     slug: "viernes-peatonales",
+    title: "Viernes Peatonales",
     date: "Todos los viernes de verano",
-    location: "Calle San Martín (Villa del Dique)",
     time: "21:00 hs",
     endTime: "00:00 hs",
-    title: "Viernes Peatonales",
+    location: "Calle San Martín (Villa del Dique)",
+    locationDetail: "Calle San Martín, entre Av. Los Fresnos y Av. Los Espinillos",
+    organizer: "Asociación de Comercio, Turismo y Afines de Villa del Dique",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/multimedia.normal.9a23a2fb2927271e.56444420564945524e45532043414c4c454a45524f532030315f6e6f726d616c2e6a7067%20%281%29.jpg-JY4MsEUdsbFL0FOp5Mp3IjT88si3Kz.jpeg",
     description: `
       <p>Durante el verano, la calle San Martín se convierte en peatonal todos los viernes a partir de las 21:00 horas, ofreciendo una experiencia única para locales y turistas.</p>
       
@@ -90,23 +94,112 @@ export const events: Event[] = [
         <li><strong>Feria de artesanos</strong>: Exposición y venta de productos artesanales de la región.</li>
         <li><strong>Gastronomía</strong>: Food trucks y puestos de comida con una variada oferta culinaria.</li>
       </ul>
+      
+      <h3>Programación típica:</h3>
+      
+      <ul>
+        <li><strong>21:00 hs</strong> - Apertura de la feria de artesanos y puestos gastronómicos</li>
+        <li><strong>21:30 hs</strong> - Actividades infantiles</li>
+        <li><strong>22:00 hs</strong> - Primer show musical</li>
+        <li><strong>22:45 hs</strong> - Presentación de danza</li>
+        <li><strong>23:15 hs</strong> - Segundo show musical</li>
+        <li><strong>00:00 hs</strong> - Cierre</li>
+      </ul>
+      
+      <p>La programación específica de cada viernes se anuncia en nuestras redes sociales durante la semana.</p>
+      
+      <p>En caso de lluvia, las actividades se trasladan al Salón Municipal o se reprograman para el siguiente viernes, según la disponibilidad.</p>
+      
+      <p>Para más información, contactar a la Asociación de Comercio, Turismo y Afines de Villa del Dique a través del WhatsApp: 3546 404083.</p>
     `,
-    image: "/placeholder.svg?height=600&width=1200&text=Viernes+Peatonales",
-    locationDetail: "Calle San Martín, entre Av. Los Fresnos y Av. Los Espinillos",
-    organizer: "Asociación de Comercio, Turismo y Afines de Villa del Dique",
+    speakers: [
+      {
+        name: "Artistas locales",
+        position: "Músicos y bandas de la región",
+        image: "/placeholder.svg?height=100&width=100&text=Artistas",
+      },
+      {
+        name: "Grupos de danza",
+        position: "Ballet, folklore y contemporáneo",
+        image: "/placeholder.svg?height=100&width=100&text=Danza",
+      },
+      {
+        name: "Artesanos",
+        position: "Expositores de productos regionales",
+        image: "/placeholder.svg?height=100&width=100&text=Artesanos",
+      },
+    ],
     tags: ["Verano", "Música en vivo", "Gastronomía", "Artesanías", "Familia"],
     relatedEvents: ["festival-jineteada-folclore"],
+    registrationLink: null,
   },
   {
     slug: "festival-jineteada-folclore",
-    date: "Próximamente",
-    location: "Predio Los Eucaliptos (Villa del Dique)",
-    time: "Todo el día",
     title: "Festival de Jineteada y Folclore",
-    description: "Evento que combina tradiciones gauchas con música folclórica en vivo en el predio Los Eucaliptos.",
-    image: "/placeholder.svg?height=600&width=1200&text=Festival",
-    tags: ["Tradición", "Folklore", "Jineteada", "Gastronomía"],
+    date: "15 y 16 de marzo de 2025",
+    time: "12:00 hs",
+    endTime: "00:00 hs",
+    location: "Predio Los Eucaliptos (Villa del Dique)",
+    locationDetail: "Ruta Provincial 5, Km 82",
+    organizer: "Asociación de Comercio, Turismo y Afines de Villa del Dique",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/476597986_1017876430364615_7571482614932357959_n.jpg-WGw7LfWOpLCiy2w7CX1p2ZykSproQj.jpeg",
+    description: `
+      <p>Villa del Dique se prepara para vivir una de las fiestas más tradicionales de la región: el Festival de Jineteada y Folclore. Durante dos días, el Predio Los Eucaliptos se convierte en el escenario perfecto para celebrar nuestras tradiciones gauchas y la música folclórica argentina.</p>
+
+      <h3>Programa del Festival:</h3>
+
+      <h4>Sábado 15 de marzo</h4>
+      <ul>
+        <li><strong>12:00 hs</strong> - Apertura del predio y patio de comidas</li>
+        <li><strong>14:00 hs</strong> - Inicio de la jineteada</li>
+        <li><strong>17:00 hs</strong> - Muestras de destreza gaucha</li>
+        <li><strong>19:00 hs</strong> - Peña folclórica</li>
+        <li><strong>21:00 hs</strong> - Festival nocturno con artistas invitados</li>
+      </ul>
+
+      <h4>Domingo 16 de marzo</h4>
+      <ul>
+        <li><strong>11:00 hs</strong> - Misa gaucha</li>
+        <li><strong>13:00 hs</strong> - Almuerzo criollo</li>
+        <li><strong>15:00 hs</strong> - Final de jineteada</li>
+        <li><strong>18:00 hs</strong> - Entrega de premios</li>
+        <li><strong>19:00 hs</strong> - Gran cierre con artistas destacados</li>
+      </ul>
+
+      <h3>Actividades:</h3>
+      <ul>
+        <li><strong>Jineteada</strong>: Las mejores tropillas y jinetes de la región</li>
+        <li><strong>Música en vivo</strong>: Artistas locales y nacionales</li>
+        <li><strong>Patio de comidas</strong>: Gastronomía criolla</li>
+        <li><strong>Artesanías</strong>: Feria de productos regionales</li>
+        <li><strong>Actividades infantiles</strong>: Juegos y entretenimiento para los más pequeños</li>
+      </ul>
+
+      <p>El evento cuenta con tribunas techadas, patio de comidas, estacionamiento y todas las comodidades para disfrutar en familia.</p>
+
+      <p>Las entradas están disponibles en preventa en la sede de la Asociación y comercios adheridos. Menores de 10 años no pagan entrada.</p>
+    `,
+    speakers: [
+      {
+        name: "Tropilla Los Amigos",
+        position: "Tropilla invitada",
+        image: "/placeholder.svg?height=100&width=100&text=LA",
+      },
+      {
+        name: "Los Cantores del Alba",
+        position: "Grupo folclórico",
+        image: "/placeholder.svg?height=100&width=100&text=CA",
+      },
+      {
+        name: "Ballet Municipal",
+        position: "Danzas tradicionales",
+        image: "/placeholder.svg?height=100&width=100&text=BM",
+      },
+    ],
+    tags: ["Tradición", "Folklore", "Jineteada", "Gastronomía", "Familia"],
     relatedEvents: ["viernes-peatonales"],
+    registrationLink: "https://www.actya.com.ar/eventos/festival-jineteada",
   },
 ]
 
