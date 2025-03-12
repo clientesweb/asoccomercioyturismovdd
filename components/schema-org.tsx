@@ -3,9 +3,9 @@ export function LocalBusiness() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "Asociación de Comercio, Turismo y Afines de Villa del Dique",
-    image: "https://vivivilladeldique.org/logo.png",
-    "@id": "https://vivivilladeldique.org",
-    url: "https://vivivilladeldique.org",
+    image: "https://www.villadeldique.org/logo.png",
+    "@id": "https://www.villadeldique.org",
+    url: "https://www.villadeldique.org",
     telephone: "+5493546404083",
     address: {
       "@type": "PostalAddress",
