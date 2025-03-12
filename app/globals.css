@@ -83,6 +83,33 @@
   h6 {
     @apply font-medium;
   }
+
+  /* Mejoras de responsividad */
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  /* Mejoras para dispositivos táctiles */
+  @media (hover: none) {
+    a,
+    button {
+      @apply active:opacity-70;
+    }
+  }
+
+  /* Mejoras para pantallas pequeñas */
+  @media (max-width: 640px) {
+    h1 {
+      @apply text-3xl;
+    }
+    h2 {
+      @apply text-2xl;
+    }
+    h3 {
+      @apply text-xl;
+    }
+  }
 }
 
 /* Estilos específicos para artículos y contenido de texto */
@@ -125,5 +152,44 @@
 /* Estilos para los enlaces dentro del contenido */
 .prose a {
   @apply text-primary hover:text-primary/80 transition-colors;
+}
+
+/* Mejoras de responsividad para componentes específicos */
+@layer components {
+  /* Contenedores responsivos */
+  .container {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Tarjetas responsivas */
+  .card-responsive {
+    @apply flex flex-col sm:flex-row;
+  }
+
+  /* Grids responsivos */
+  .grid-responsive {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6;
+  }
+
+  /* Botones responsivos */
+  .btn-responsive {
+    @apply w-full sm:w-auto;
+  }
+
+  /* Imágenes responsivas */
+  .img-responsive {
+    @apply w-full h-auto object-cover;
+  }
+}
+
+/* Mejoras para accesibilidad */
+@layer utilities {
+  .focus-visible {
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2;
+  }
+
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
 }
 
