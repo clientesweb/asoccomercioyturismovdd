@@ -10,12 +10,15 @@ import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { getLatestArticles } from "@/lib/articles"
 import { getUpcomingEvents } from "@/lib/events"
+import VideoPlayer from "@/components/video-player"
 
 export default function Home() {
   // Estado para el carrusel de noticias
   const [currentSlide, setCurrentSlide] = useState(0)
   const [autoplay, setAutoplay] = useState(true)
   const autoplayTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+
+  const [selectedVideo, setSelectedVideo] = useState<{ src: string; poster: string } | null>(null)
 
   // Datos para el carrusel del hero (noticias y eventos)
   const latestArticles = getLatestArticles(3)
@@ -295,24 +298,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* YouTube Channel Section */}
+      {/* Videos Section */}
       <section className="bg-gradient-to-b from-primary to-secondary py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-white text-xl mb-4">Nuestro canal de Youtube</h2>
-          <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">#TurismoVilladelDique</div>
+          <h2 className="text-white text-xl mb-4">Nuestros videos</h2>
+          <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">#VillaDelDique</div>
           <p className="text-white text-base md:text-lg max-w-3xl mb-8">
             La Asociación de Comercio y Turismo de Villa del Dique trabaja con un sueño compartido: convertir a Villa
             del Dique en un destino turístico de excelencia. Hoy, ese anhelo se renueva con la misma fuerza y convicción
             que movió a sus fundadores.
           </p>
           <Link
-            href="https://youtube.com"
+            href="https://www.instagram.com/vivivilladeldique?igsh=MXhiZGYxNjd0N2V4MA=="
             target="_blank"
             className="inline-flex items-center bg-secondary/80 text-white px-6 md:px-8 py-3 md:py-4 rounded-full hover:bg-secondary transition-colors mb-12 focus:outline-none focus:ring-2 focus:ring-white"
             rel="noopener noreferrer"
-            aria-label="Visitar nuestro canal de YouTube"
+            aria-label="Seguinos en Instagram"
           >
-            Visitá nuestro canal de Youtube{" "}
+            Seguinos en Instagram{" "}
             <span className="ml-2" aria-hidden="true">
               →
             </span>
@@ -321,21 +324,29 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             {[
               {
-                title: "Descubriendo Villa del Dique",
-                thumbnail: "/placeholder.svg?height=200&width=400",
-                videoId: "video1",
+                title: "Villa del Dique - Un pueblo para disfrutar y descansar",
+                thumbnail:
+                  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/portada-video-1.jpg-yskdK1rdAIB0lcAMCZYpjwHuwAWcyG.jpeg",
+                videoSrc: "/video-1.mp4",
               },
               {
-                title: "Feria Gastronómica Local",
-                thumbnail: "/placeholder.svg?height=200&width=400",
-                videoId: "video2",
+                title: "Mountain Bike en Villa del Dique",
+                thumbnail:
+                  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/portada-video-2.jpg-LYWClJPZbr8PEHWrUB0maYEF3m5sZg.jpeg",
+                videoSrc: "/video-2.mp4",
               },
             ].map((video, index) => (
-              <div key={index} className="relative rounded-3xl overflow-hidden aspect-video">
+              <div key={index} className="relative rounded-3xl overflow-hidden aspect-video group">
                 <Image src={video.thumbnail || "/placeholder.svg"} alt={video.title} fill className="object-cover" />
                 <div className="absolute inset-0 flex items-center justify-center group cursor-pointer">
                   <button
-                    className="w-12 h-12 md:w-16 md:h-16 bg-red-600 rounded-full flex items-center justify-center transform transition-transform group-hover:scale-110 focus:outline-none focus:ring-4 focus:ring-white"
+                    onClick={() => {
+                      setSelectedVideo({
+                        src: video.videoSrc,
+                        poster: video.thumbnail,
+                      })
+                    }}
+                    className="w-12 h-12 md:w-16 md:h-16 bg-primary rounded-full flex items-center justify-center transform transition-transform group-hover:scale-110 focus:outline-none focus:ring-4 focus:ring-white"
                     aria-label={`Reproducir video: ${video.title}`}
                   >
                     <span className="sr-only">Reproducir</span>
@@ -581,6 +592,13 @@ export default function Home() {
           </div>
         </section>
       </main>
+
+      <VideoPlayer
+        src={selectedVideo?.src || ""}
+        poster={selectedVideo?.poster || ""}
+        isOpen={!!selectedVideo}
+        onClose={() => setSelectedVideo(null)}
+      />
 
       <Footer />
     </div>
