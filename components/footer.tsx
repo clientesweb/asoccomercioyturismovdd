@@ -9,6 +9,8 @@ function SocialIcon({ icon, href = "#", label }: { icon: React.ReactNode; href?:
       href={href}
       className="w-10 h-10 rounded-full bg-primary hover:bg-secondary flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-white/50"
       aria-label={label}
+      target="_blank"
+      rel="noopener noreferrer"
     >
       <div className="text-white">{icon}</div>
     </Link>
@@ -162,8 +164,8 @@ export default function Footer() {
                 </li>
                 <li className="flex items-center">
                   <MailIcon className="w-5 h-5 text-secondary mr-3 flex-shrink-0" />
-                  <a href="mailto:info@actya.com.ar" className="text-white/80 hover:text-white">
-                    info@actya.com.ar
+                  <a href="mailto:info@villadeldique.org" className="text-white/80 hover:text-white">
+                    info@villadeldique.org
                   </a>
                 </li>
               </ul>
