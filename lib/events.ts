@@ -237,9 +237,22 @@ export function getUpcomingEvents(count?: number): Event[] {
   return count ? upcomingEvents.slice(0, count) : upcomingEvents
 }
 
+// Verificar que los slugs en el array de eventos coincidan exactamente con los que se usan en los enlaces
+// Asegurarse de que la función getEventBySlug funcione correctamente
+
 // Función para obtener un evento por su slug
 export function getEventBySlug(slug: string): Event | undefined {
-  return events.find((event) => event.slug === slug)
+  // Añadir un console.log para depuración
+  console.log("Buscando evento con slug:", slug)
+  console.log(
+    "Eventos disponibles:",
+    events.map((e) => e.slug),
+  )
+
+  const evento = events.find((event) => event.slug === slug)
+  console.log("Evento encontrado:", evento ? "Sí" : "No")
+
+  return evento
 }
 
 // Función para obtener eventos relacionados
