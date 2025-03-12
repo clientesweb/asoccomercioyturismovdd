@@ -7,8 +7,8 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/admin/", "/api/"],
     },
-    sitemap: "https://vivivilladeldique.org/sitemap.xml",
-    host: "https://vivivilladeldique.org",
+    sitemap: "https://www.villadeldique.org/sitemap.xml",
+    host: "https://www.villadeldique.org",
   }
 }
 
