@@ -16,7 +16,7 @@ const inter = Inter({
 
 // Metadatos SEO
 export const metadata: Metadata = {
-  metadataBase: new URL("https://vivivilladeldique.org"),
+  metadataBase: new URL("https://www.villadeldique.org"),
   title: {
     default: "Villa del Dique - Asociación de Comercio y Turismo",
     template: "%s | Villa del Dique",
@@ -51,14 +51,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "es_AR",
-    url: "https://vivivilladeldique.org",
+    url: "https://www.villadeldique.org",
     siteName: "Villa del Dique - Turismo y Comercio",
     title: "Villa del Dique - Descubre el paraíso en Córdoba",
     description:
       "Descubre Villa del Dique, un paraíso turístico en Córdoba. Eventos, alojamientos, gastronomía y actividades para disfrutar en familia.",
     images: [
       {
-        url: "https://vivivilladeldique.org/og-image.jpg",
+        url: "https://www.villadeldique.org/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Villa del Dique - Paisaje del lago",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     title: "Villa del Dique - Descubre el paraíso en Córdoba",
     description:
       "Descubre Villa del Dique, un paraíso turístico en Córdoba. Eventos, alojamientos, gastronomía y actividades para disfrutar en familia.",
-    images: ["https://vivivilladeldique.org/twitter-image.jpg"],
+    images: ["https://www.villadeldique.org/twitter-image.jpg"],
     creator: "@VilladelDique",
     site: "@VilladelDique",
   },
@@ -90,7 +90,7 @@ export const metadata: Metadata = {
     yandex: "verificacion_yandex",
     yahoo: "verificacion_yahoo",
     other: {
-      me: ["info@vivivilladeldique.org"],
+      me: ["info@villadeldique.org"],
     },
   },
   category: "tourism",
@@ -114,7 +114,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es">
+    <html lang="es" className="scroll-smooth">
       <head>
         {/* Favicons */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -124,7 +124,7 @@ export default function RootLayout({
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#01579B" />
         <meta name="msapplication-TileColor" content="#01579B" />
       </head>
-      <body className={`${inter.className} ${inter.variable} font-sans`}>
+      <body className={`${inter.className} ${inter.variable} font-sans antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <ScrollToTop />
           {/* Schema.org para SEO local */}
