@@ -49,8 +49,8 @@ export default function EventosClientPage() {
           {/* Banner publicitario */}
           <div className="rounded-2xl overflow-hidden mb-12">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/SaveInsta.to_447977303_1261253978198034_4027655341568195616_n.jpg-srE61xHNqDOCJIHNr7H5mG4cZZKXLf.jpeg"
-              alt="Te invitamos a conocer nuestra asociación"
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2.jpg-cNdWTisAteyHeZ2vjRRD4Y5Jv67AJz.jpeg"
+              alt="Programa de capacitaciones"
               width={1080}
               height={1350}
               className="w-full"
