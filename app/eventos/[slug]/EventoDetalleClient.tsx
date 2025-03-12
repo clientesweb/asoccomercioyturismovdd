@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 import {
   ArrowLeft,
   Calendar,
@@ -22,23 +23,51 @@ import {
 } from "lucide-react"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
-import { getRelatedEvents, type Event } from "@/lib/events"
+import { events } from "@/lib/events"
 
 interface EventoDetalleClientProps {
-  evento: Event // Recibimos el evento directamente como prop
+  slug: string
 }
 
-export default function EventoDetalleClient({ evento }: EventoDetalleClientProps) {
-  const [relatedEvents, setRelatedEvents] = useState<Event[]>([])
+export default function EventoDetalleClient({ slug }: EventoDetalleClientProps) {
+  const router = useRouter()
   const [isShareMenuOpen, setIsShareMenuOpen] = useState(false)
 
+  // Buscar el evento directamente del array importado
+  const evento = events.find((event) => event.slug === slug)
+
+  // Buscar eventos relacionados
+  const relatedEvents = evento?.relatedEvents
+    ? events.filter((event) => evento.relatedEvents?.includes(event.slug))
+    : []
+
+  // Si no hay evento, redirigir a la página de eventos
   useEffect(() => {
-    // Obtener eventos relacionados
-    if (evento.relatedEvents && evento.relatedEvents.length > 0) {
-      const related = getRelatedEvents(evento.relatedEvents)
-      setRelatedEvents(related)
+    if (!evento) {
+      router.push("/eventos")
     }
-  }, [evento])
+  }, [evento, router])
+
+  if (!evento) {
+    return (
+      <div className="min-h-screen flex flex-col">
+        <Header />
+        <main className="flex-grow flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-gray-800 mb-4">Evento no encontrado</h1>
+            <p className="text-gray-600 mb-6">El evento que estás buscando no existe o ha sido eliminado.</p>
+            <Link
+              href="/eventos"
+              className="inline-flex items-center justify-center rounded-full bg-primary text-white px-6 py-3 text-base font-medium hover:bg-primary/90 transition-colors"
+            >
+              Ver todos los eventos
+            </Link>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    )
+  }
 
   const toggleShareMenu = () => {
     setIsShareMenuOpen(!isShareMenuOpen)
@@ -179,7 +208,7 @@ export default function EventoDetalleClient({ evento }: EventoDetalleClientProps
                     <div>
                       <div className="font-medium">Horario</div>
                       <div className="text-gray-600">
-                        {evento.time} a {evento.endTime}
+                        {evento.time} {evento.endTime ? `a ${evento.endTime}` : ""}
                       </div>
                     </div>
                   </li>
@@ -188,7 +217,7 @@ export default function EventoDetalleClient({ evento }: EventoDetalleClientProps
                     <div>
                       <div className="font-medium">Ubicación</div>
                       <div className="text-gray-600">{evento.location}</div>
-                      <div className="text-sm text-gray-500">{evento.locationDetail}</div>
+                      {evento.locationDetail && <div className="text-sm text-gray-500">{evento.locationDetail}</div>}
                     </div>
                   </li>
                   <li className="flex items-start">
