@@ -39,18 +39,19 @@ export default function Home() {
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/villa-del-dieque-scaled-1.jpg-bhcArDy6gzaLSUqLV3DZZwHYm9EWli.jpeg",
       href: `/noticias/${latestArticles[0]?.slug || "bienvenidos-asociacion-comercio-turismo"}`,
     },
-    // Evento 1
+    // Evento 1 - Viernes Peatonales
     {
       type: "evento",
-      date: upcomingEvents[0]?.date || "25 de marzo de 2025",
-      time: upcomingEvents[0]?.time || "10:00 hs",
-      location: upcomingEvents[0]?.location || "Via Zoom",
-      category: "Webinar",
-      title: upcomingEvents[0]?.title || "Turismo receptivo: explorando oportunidades en Brasil",
+      date: "Todos los viernes de verano",
+      time: "21:00 hs",
+      location: "Calle San Martín (Villa del Dique)",
+      category: "Evento",
+      title: "Viernes Peatonales",
       description:
-        "Únete a nosotros para explorar las oportunidades turísticas en el mercado brasileño y conocer estrategias para atraer visitantes.",
-      image: upcomingEvents[0]?.image || "/placeholder.svg?height=600&width=1200&text=Brasil",
-      href: `/eventos/${upcomingEvents[0]?.slug || "mercados-mundo-oportunidades-brasil"}`,
+        "Durante el verano, la calle San Martín se convierte en peatonal todos los viernes, ofreciendo espectáculos musicales, danza, actividades para niños, feria de artesanos y gastronomía.",
+      image:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/multimedia.normal.9a23a2fb2927271e.56444420564945524e45532043414c4c454a45524f532030315f6e6f726d616c2e6a7067%20%281%29.jpg-JY4MsEUdsbFL0FOp5Mp3IjT88si3Kz.jpeg",
+      href: "/eventos/viernes-peatonales",
     },
     // Noticia 2
     {
@@ -64,18 +65,19 @@ export default function Home() {
       image: latestArticles[1]?.image || "/placeholder.svg?height=600&width=1200&text=Slide+2",
       href: `/noticias/${latestArticles[1]?.slug || "asamblea-general-turismo-participacion-asociacion"}`,
     },
-    // Evento 2
+    // Evento 2 - Festival de Jineteada y Folclore
     {
       type: "evento",
-      date: upcomingEvents[1]?.date || "12 de marzo de 2025",
-      time: upcomingEvents[1]?.time || "15:00 hs",
-      location: upcomingEvents[1]?.location || "Salón Municipal (Villa del Dique)",
-      category: "Jornada",
-      title: upcomingEvents[1]?.title || "El turismo y su impacto en nuestra comunidad",
+      date: "15 y 16 de marzo de 2025",
+      time: "12:00 hs",
+      location: "Predio Los Eucaliptos (Villa del Dique)",
+      category: "Festival",
+      title: "Festival de Jineteada y Folclore",
       description:
-        "Análisis del impacto del turismo en el desarrollo económico y social de Villa del Dique, con la participación de expertos del sector.",
-      image: upcomingEvents[1]?.image || "/placeholder.svg?height=600&width=1200&text=Turismo",
-      href: `/eventos/${upcomingEvents[1]?.slug || "la-agi-impacto-comunidad"}`,
+        "Villa del Dique se prepara para vivir una de las fiestas más tradicionales de la región: el Festival de Jineteada y Folclore, con jineteada, música en vivo, gastronomía criolla y artesanías.",
+      image:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/476597986_1017876430364615_7571482614932357959_n.jpg-WGw7LfWOpLCiy2w7CX1p2ZykSproQj.jpeg",
+      href: "/eventos/festival-jineteada-folclore",
     },
     // Noticia 3
     {
@@ -302,7 +304,9 @@ export default function Home() {
       <section className="bg-gradient-to-b from-primary to-secondary py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-white text-xl mb-4">Nuestros videos</h2>
-          <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">#VillaDelDique</div>
+          <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
+            <span className="text-highlight">#Viví</span>VillaDelDique
+          </div>
           <p className="text-white text-base md:text-lg max-w-3xl mb-8">
             La Asociación de Comercio y Turismo de Villa del Dique trabaja con un sueño compartido: convertir a Villa
             del Dique en un destino turístico de excelencia. Hoy, ese anhelo se renueva con la misma fuerza y convicción
@@ -366,44 +370,76 @@ export default function Home() {
             Sumate a <span className="text-primary font-medium">nuestros eventos</span>
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {getUpcomingEvents(4).map((event, index) => (
-              <div
-                key={index}
-                className="relative overflow-hidden rounded-3xl h-[250px] md:h-[300px] group"
-                style={{
-                  background: `linear-gradient(135deg, ${
-                    index === 0 ? "#01579B, #03A9F4" : index === 1 ? "#4CAF50, #8BC34A" : "#01579B, #4CAF50"
-                  })`,
-                }}
-              >
-                <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-between">
-                  <div className="space-y-2">
-                    <div className="flex flex-wrap items-center gap-4 text-white/90">
-                      <div className="flex items-center">
-                        <Calendar className="w-5 h-5 text-highlight mr-2 flex-shrink-0" />
-                        <span>{event.date}</span>
-                      </div>
-                      <div className="flex items-center">
-                        <MapPin className="w-5 h-5 text-highlight mr-2 flex-shrink-0" />
-                        <span>{event.location}</span>
-                      </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Viernes Peatonales */}
+            <div
+              className="relative overflow-hidden rounded-3xl h-[250px] md:h-[300px] group"
+              style={{
+                background: "linear-gradient(135deg, #01579B, #03A9F4)",
+              }}
+            >
+              <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-between">
+                <div className="space-y-2">
+                  <div className="flex flex-wrap items-center gap-4 text-white/90">
+                    <div className="flex items-center">
+                      <Calendar className="w-5 h-5 text-highlight mr-2 flex-shrink-0" />
+                      <span>Todos los viernes de verano</span>
                     </div>
-                    <h3 className="text-xl md:text-2xl font-medium text-white mt-4 line-clamp-3">{event.title}</h3>
+                    <div className="flex items-center">
+                      <MapPin className="w-5 h-5 text-highlight mr-2 flex-shrink-0" />
+                      <span>Calle San Martín</span>
+                    </div>
                   </div>
-                  <Link
-                    href={`/eventos/${event.slug}`}
-                    className="inline-flex items-center text-white hover:opacity-80 transition-opacity focus:outline-none focus:underline"
-                    aria-label={`Ver evento: ${event.title}`}
-                  >
-                    Ver evento{" "}
-                    <span className="ml-2" aria-hidden="true">
-                      →
-                    </span>
-                  </Link>
+                  <h3 className="text-xl md:text-2xl font-medium text-white mt-4 line-clamp-3">Viernes Peatonales</h3>
                 </div>
+                <Link
+                  href="/eventos/viernes-peatonales"
+                  className="inline-flex items-center text-white hover:opacity-80 transition-opacity focus:outline-none focus:underline"
+                  aria-label="Ver evento: Viernes Peatonales"
+                >
+                  Ver evento{" "}
+                  <span className="ml-2" aria-hidden="true">
+                    →
+                  </span>
+                </Link>
               </div>
-            ))}
+            </div>
+
+            {/* Festival de Jineteada y Folclore */}
+            <div
+              className="relative overflow-hidden rounded-3xl h-[250px] md:h-[300px] group"
+              style={{
+                background: "linear-gradient(135deg, #4CAF50, #8BC34A)",
+              }}
+            >
+              <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-between">
+                <div className="space-y-2">
+                  <div className="flex flex-wrap items-center gap-4 text-white/90">
+                    <div className="flex items-center">
+                      <Calendar className="w-5 h-5 text-highlight mr-2 flex-shrink-0" />
+                      <span>15 y 16 de marzo de 2025</span>
+                    </div>
+                    <div className="flex items-center">
+                      <MapPin className="w-5 h-5 text-highlight mr-2 flex-shrink-0" />
+                      <span>Predio Los Eucaliptos</span>
+                    </div>
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-medium text-white mt-4 line-clamp-3">
+                    Festival de Jineteada y Folclore
+                  </h3>
+                </div>
+                <Link
+                  href="/eventos/festival-jineteada-folclore"
+                  className="inline-flex items-center text-white hover:opacity-80 transition-opacity focus:outline-none focus:underline"
+                  aria-label="Ver evento: Festival de Jineteada y Folclore"
+                >
+                  Ver evento{" "}
+                  <span className="ml-2" aria-hidden="true">
+                    →
+                  </span>
+                </Link>
+              </div>
+            </div>
           </div>
 
           <div className="text-center mt-8">
