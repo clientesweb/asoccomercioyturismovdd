@@ -18,6 +18,7 @@ import {
   User,
   Tag,
   MessageCircle,
+  Ticket,
 } from "lucide-react"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
@@ -33,7 +34,7 @@ export default function EventoDetalleClient() {
 
   useEffect(() => {
     // Buscar el evento por slug
-    const eventoEncontrado = getEventBySlug(slug)
+    const eventoEncontrado = getEventBySlug(slug as string)
 
     if (eventoEncontrado) {
       setEvento(eventoEncontrado)
@@ -133,7 +134,8 @@ export default function EventoDetalleClient() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center rounded-full bg-primary text-white px-8 py-3 text-base font-medium hover:bg-primary/90 transition-colors"
                     >
-                      Inscribirme al evento
+                      <Ticket className="w-5 h-5 mr-2" />
+                      Comprar entradas
                     </a>
                   </div>
                 )}
