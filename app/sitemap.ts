@@ -51,15 +51,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Aquí podrías agregar páginas dinámicas como noticias y eventos
   // Esto sería ideal hacerlo de forma dinámica con datos reales
+  // Actualizar el sitemap para incluir solo las noticias que mantenemos
   const noticiasPages = [
-    "asociacion-renovo-autoridades-comisiones-asesoras",
-    "asamblea-general-turismo-participacion-asociacion",
-    "turismo-villa-dique-crecio-interanual",
-    "analisis-sector-turistico-villa-dique-2025",
-    "nuevos-cursos-seminarios-desarrollo-turistico",
-    "actividad-turistica-aumento-diciembre",
-    "villa-dique-promociona-ferias-internacionales",
-    "villa-dique-feria-turismo-madrid",
+    "bienvenidos-asociacion-comercio-turismo",
+    "asociacion-lanza-capacitaciones-para-turismo-comercio",
   ].map((slug) => ({
     url: `${baseUrl}/noticias/${slug}`,
     lastModified: new Date(),
