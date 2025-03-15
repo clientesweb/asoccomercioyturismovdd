@@ -11,6 +11,7 @@ import Footer from "@/components/footer"
 import { getLatestArticles } from "@/lib/articles"
 import { getUpcomingEvents } from "@/lib/events"
 import VideoPlayer from "@/components/video-player"
+import WeatherWidget from "@/components/weather-widget"
 
 export default function Home() {
   // Estado para el carrusel de noticias
@@ -249,7 +250,13 @@ export default function Home() {
         ))}
       </div>
 
-      {/* El resto del contenido de la página permanece igual */}
+      {/* Weather Widget Section */}
+      <section className="py-6 bg-gradient-to-r from-primary/10 to-secondary/10">
+        <div className="container mx-auto px-4">
+          <WeatherWidget />
+        </div>
+      </section>
+
       {/* Latest News Section */}
       <section className="container mx-auto px-4 py-12">
         <h2 className="text-2xl md:text-3xl font-bold text-primary mb-8">Últimas noticias</h2>
