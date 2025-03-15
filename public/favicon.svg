@@ -1,14 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <style>
-    path { fill: #01579B; }
+    .icon-bg { fill: #0891b2; }
+    .mountains { fill: #22c55e; }
+    .sun { fill: #fbbf24; }
+    .water { fill: #0ea5e9; }
+    .sand { fill: #fcd34d; }
     @media (prefers-color-scheme: dark) {
-      path { fill: #03A9F4; }
+      .icon-bg { fill: #0ea5e9; }
+      .mountains { fill: #4ade80; }
+      .sun { fill: #fcd34d; }
+      .water { fill: #38bdf8; }
+      .sand { fill: #fde68a; }
     }
   </style>
-  <circle cx="50" cy="50" r="45" fill="#01579B"/>
-  <path fill="#03A9F4" d="M50 10 C30 10 15 25 15 45 C15 65 30 80 50 80 C70 80 85 65 85 45 C85 25 70 10 50 10 Z"/>
-  <path fill="#4CAF50" d="M50 20 C35 20 25 30 25 45 C25 60 35 70 50 70 C65 70 75 60 75 45 C75 30 65 20 50 20 Z"/>
-  <path fill="#FFC107" d="M50 30 C40 30 35 37.5 35 45 C35 52.5 40 60 50 60 C60 60 65 52.5 65 45 C65 37.5 60 30 50 30 Z"/>
-  <path fill="#FFE0B2" d="M50 40 C45 40 42.5 42.5 42.5 45 C42.5 47.5 45 50 50 50 C55 50 57.5 47.5 57.5 45 C57.5 42.5 55 40 50 40 Z"/>
+  <path class="icon-bg" d="M50,0 L93.3,25 V75 L50,100 L6.7,75 V25 L50,0z"/>
+  <path class="mountains" d="M25,65 L40,40 L50,55 L60,35 L75,65 Z"/>
+  <path class="sun" d="M25,35 A5,5 0 0,1 35,35 A5,5 0 0,1 25,35"/>
+  <path class="water" d="M20,70 Q35,60 50,70 Q65,80 80,70 L80,80 L20,80 Z"/>
+  <path class="sand" d="M20,80 L80,80 L80,85 L20,85 Z"/>
 </svg>
 
