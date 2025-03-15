@@ -53,17 +53,20 @@ export default function Home() {
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/multimedia.normal.9a23a2fb2927271e.56444420564945524e45532043414c4c454a45524f532030315f6e6f726d616c2e6a7067%20%281%29.jpg-JY4MsEUdsbFL0FOp5Mp3IjT88si3Kz.jpeg",
       href: "/eventos/viernes-peatonales",
     },
-    // Noticia 2
+    // Noticia 2 - Capacitaciones
     {
       type: "noticia",
-      date: latestArticles[1]?.date || "Martes 2 de febrero de 2025",
-      category: latestArticles[1]?.category || "Proyección Internacional",
+      date: latestArticles[1]?.date || "9 de marzo de 2025",
+      category: latestArticles[1]?.category || "Comunicados de Prensa",
       title:
-        latestArticles[1]?.title || "La Asamblea General de Turismo contó con la participación de nuestra Asociación",
+        latestArticles[1]?.title ||
+        "La Asociación lanza un programa de capacitaciones para potenciar el turismo y comercio local",
       description:
-        "Representantes de la Asociación de Comercio y Turismo de Villa del Dique participaron en la asamblea anual de Turismo.",
-      image: latestArticles[1]?.image || "/placeholder.svg?height=600&width=1200&text=Slide+2",
-      href: `/noticias/${latestArticles[1]?.slug || "asamblea-general-turismo-participacion-asociacion"}`,
+        "La Asociación de Comercio y Turismo de Villa del Dique sigue impulsando el crecimiento del sector con un nuevo programa de capacitaciones.",
+      image:
+        latestArticles[1]?.image ||
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2.jpg-aIECL47jNFbR4BbMKz2iHb0BFPJYHx.jpeg",
+      href: `/noticias/${latestArticles[1]?.slug || "asociacion-lanza-capacitaciones-para-turismo-comercio"}`,
     },
     // Evento 2 - Festival de Jineteada y Folclore
     {
@@ -78,17 +81,6 @@ export default function Home() {
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/476597986_1017876430364615_7571482614932357959_n.jpg-WGw7LfWOpLCiy2w7CX1p2ZykSproQj.jpeg",
       href: "/eventos/festival-jineteada-folclore",
-    },
-    // Noticia 3
-    {
-      type: "noticia",
-      date: latestArticles[2]?.date || "Lunes 24 de febrero de 2025",
-      category: latestArticles[2]?.category || "Informes Económicos",
-      title: latestArticles[2]?.title || "El turismo en Villa del Dique creció un 15% interanual",
-      description:
-        "Según el último informe económico de la Asociación, el turismo en Villa del Dique mostró signos de recuperación.",
-      image: latestArticles[2]?.image || "/placeholder.svg?height=600&width=1200&text=Slide+3",
-      href: `/noticias/${latestArticles[2]?.slug || "turismo-villa-dique-crecio-interanual"}`,
     },
   ]
 
