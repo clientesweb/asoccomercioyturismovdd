@@ -103,7 +103,7 @@ export default function Footer() {
                 />
               </div>
               <p className="text-white/80 mb-6">
-                La Asociación de Comercio y Turismo de Villa del Dique trabaja desde 1924 para el desarrollo del
+                La Asociación de Comercio y Turismo de Villa del Dique trabaja desde 2014 para el desarrollo del
                 comercio y el turismo en nuestra comunidad.
               </p>
               <div className="flex space-x-4">
