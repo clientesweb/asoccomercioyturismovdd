@@ -149,7 +149,7 @@ export const events: Event[] = [
 
       <h3>Programa del Festival:</h3>
 
-      <h4>Sábado 15 de marzo</h4>
+      <h4>Sábado 8 de Febrero</h4>
       <ul>
         <li><strong>12:00 hs</strong> - Apertura del predio y patio de comidas</li>
         <li><strong>14:00 hs</strong> - Inicio de la jineteada</li>
