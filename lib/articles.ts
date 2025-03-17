@@ -65,7 +65,7 @@ export const articles: Article[] = [
   {
     slug: "bienvenidos-asociacion-comercio-turismo",
     title: "Bienvenidos a la Asociación de Comercio y Turismo de Villa del Dique",
-    date: "9 de marzo de 2025",
+    date: "17 de marzo de 2025",
     category: "INSTITUCIONAL",
     author: "Equipo de Comunicación ACTyA",
     readTime: "5 minutos",
@@ -122,7 +122,7 @@ export const articles: Article[] = [
   {
     slug: "asociacion-lanza-capacitaciones-para-turismo-comercio",
     title: "La Asociación lanza un programa de capacitaciones para potenciar el turismo y comercio local",
-    date: "9 de marzo de 2025",
+    date: "17 de marzo de 2025",
     category: "COMUNICADOS DE PRENSA",
     author: "Equipo de Comunicación ACTyA",
     readTime: "5 minutos",
