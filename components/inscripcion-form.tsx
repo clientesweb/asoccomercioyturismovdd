@@ -122,6 +122,7 @@ export default function InscripcionForm({ capacitaciones, selectedCapacitacion }
     return Object.keys(newErrors).length === 0
   }
 
+  // Actualizar el número de WhatsApp en la función handleSubmit
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
 
@@ -151,13 +152,13 @@ export default function InscripcionForm({ capacitaciones, selectedCapacitacion }
 *Trabaja en Villa del Dique:* ${formData.trabajaEnVillaDique === "si" ? "Sí" : "No"}
 ${formData.trabajaEnVillaDique === "si" ? `*Comercio:* ${formData.nombreComercio}` : ""}
 *Comentarios:* ${formData.comentarios || "No se incluyeron comentarios"}
-  `.trim()
+`.trim()
 
     // Codificar el mensaje para URL
     const encodedMessage = encodeURIComponent(message)
 
-    // Número de WhatsApp
-    const phoneNumber = "5493512082818"
+    // Número de WhatsApp actualizado
+    const phoneNumber = "5493546404083"
 
     // Crear la URL de WhatsApp
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`
