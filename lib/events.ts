@@ -168,9 +168,12 @@ export const events: Event[] = [
         <li><strong>Actividades infantiles</strong>: Juegos y entretenimiento para los más pequeños</li>
       </ul>
 
-      <p>El evento cuenta con tribunas techadas, patio de comidas, estacionamiento y todas las comodidades para disfrutar en familia.</p>
+      <h3>Sobre el Centro Tradicionalista "Las Espuelas":</h3>
+      <p>El Centro Tradicionalista "Las Espuelas" de Villa del Dique es una organización dedicada a preservar y promover las tradiciones gauchas y el folclore argentino en la región. A lo largo de los años, ha sido fundamental en la organización de eventos culturales que celebran la herencia criolla.</p>
+      
+      <p>A través de estas y otras actividades, el Centro Tradicionalista "Las Espuelas" se ha consolidado como un pilar en la promoción y conservación de las tradiciones gauchas en Villa del Dique, ofreciendo a locales y visitantes la oportunidad de conectarse con la rica herencia cultural de la región.</p>
 
-      <p>Las entradas están disponibles en preventa en la sede de la Asociación y comercios adheridos. Menores de 10 años no pagan entrada.</p>
+      <p>Las entradas están disponibles en preventa en la Municipalidad y comercios adheridos. Menores de 10 años no pagan entrada.</p>
     `,
     speakers: [
       {
