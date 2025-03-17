@@ -1,3 +1,5 @@
+"use client"
+
 import type React from "react"
 import Link from "next/link"
 import Image from "next/image"
@@ -49,26 +51,77 @@ export default function Footer() {
             </p>
 
             <div className="bg-white/10 backdrop-blur-sm p-6 md:p-8 rounded-3xl border border-white/20 shadow-xl">
-              <form className="flex flex-col md:flex-row gap-4">
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault()
+
+                  // Obtener los valores del formulario
+                  const nameInput = document.getElementById("newsletter-name") as HTMLInputElement
+                  const emailInput = document.getElementById("newsletter-email") as HTMLInputElement
+
+                  // Validar campos
+                  if (!nameInput.value.trim()) {
+                    alert("Por favor, ingresa tu nombre")
+                    return
+                  }
+
+                  if (!emailInput.value.trim()) {
+                    alert("Por favor, ingresa tu email")
+                    return
+                  }
+
+                  if (!/\S+@\S+\.\S+/.test(emailInput.value)) {
+                    alert("Por favor, ingresa un email válido")
+                    return
+                  }
+
+                  // Construir el mensaje para WhatsApp
+                  const message = `
+*Nueva suscripción al boletín informativo*
+----------------------------------
+*Nombre:* ${nameInput.value.trim()}
+*Email:* ${emailInput.value.trim()}
+
+Me gustaría recibir información sobre eventos, noticias y promociones de la Asociación de Comercio y Turismo de Villa del Dique.
+`.trim()
+
+                  // Codificar el mensaje para URL
+                  const encodedMessage = encodeURIComponent(message)
+
+                  // Número de WhatsApp
+                  const phoneNumber = "5493546404083"
+
+                  // Crear la URL de WhatsApp
+                  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`
+
+                  // Abrir WhatsApp en una nueva pestaña
+                  window.open(whatsappUrl, "_blank")
+
+                  // Limpiar el formulario
+                  nameInput.value = ""
+                  emailInput.value = ""
+                }}
+                className="flex flex-col md:flex-row gap-4"
+              >
                 <div className="flex-1">
-                  <label htmlFor="name" className="sr-only">
+                  <label htmlFor="newsletter-name" className="sr-only">
                     Nombre
                   </label>
                   <input
                     type="text"
-                    id="name"
+                    id="newsletter-name"
                     placeholder="Nombre"
                     className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-secondary"
                     aria-required="true"
                   />
                 </div>
                 <div className="flex-1">
-                  <label htmlFor="email" className="sr-only">
+                  <label htmlFor="newsletter-email" className="sr-only">
                     Email
                   </label>
                   <input
                     type="email"
-                    id="email"
+                    id="newsletter-email"
                     placeholder="Email"
                     className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-secondary"
                     aria-required="true"
@@ -103,7 +156,7 @@ export default function Footer() {
                 />
               </div>
               <p className="text-white/80 mb-6">
-                La Asociación de Comercio y Turismo de Villa del Dique trabaja desde 2014 para el desarrollo del
+                La Asociación de Comercio y Turismo de Villa del Dique trabaja desde 1924 para el desarrollo del
                 comercio y el turismo en nuestra comunidad.
               </p>
               <div className="flex space-x-4">
