@@ -106,7 +106,7 @@ export default function EventosClientPage() {
                   <div className="flex items-center space-x-6 text-highlight">
                     <div className="flex items-center">
                       <Calendar className="w-5 h-5 mr-2" />
-                      <span>15 y 16 de marzo de 2025</span>
+                      <span>8 de febrero de 2025</span>
                     </div>
                     <div className="flex items-center">
                       <MapPin className="w-5 h-5 mr-2" />
