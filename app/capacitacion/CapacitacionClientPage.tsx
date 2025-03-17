@@ -19,6 +19,7 @@ export default function CapacitacionClientPage() {
       description:
         "El servicio al cliente es la base del éxito de cualquier negocio. Este taller tiene como propósito dotar a los comerciantes de las habilidades necesarias para ofrecer una experiencia de atención excepcional que fomente la lealtad y satisfacción del cliente.",
       modalidad: "Teórico - Práctico, Presencial",
+      ubicacion: "Hotel Carrillo Amerian",
       destinatarios: "Público general",
       duracion: "8 horas (4 encuentros de 2 horas cada uno)",
       fechas: ["Martes 15 de abril", "Martes 22 de abril", "Martes 29 de abril", "Martes 6 de mayo"],
@@ -33,6 +34,7 @@ export default function CapacitacionClientPage() {
       description:
         "Este curso está diseñado para quienes desean convertir sus ideas en proyectos viables. Durante la capacitación, los participantes recibirán conocimientos clave sobre planificación, estrategias de negocio y herramientas para implementar su emprendimiento de manera efectiva.",
       modalidad: "Teórico - Práctico, Presencial",
+      ubicacion: "Hotel Carrillo Amerian",
       destinatarios: "Emprendedores y público general",
       duracion: "8 horas (4 encuentros de 2 horas cada uno)",
       fechas: ["Martes 13 de mayo", "Martes 20 de mayo", "Martes 27 de mayo", "Martes 3 de junio"],
@@ -146,18 +148,30 @@ export default function CapacitacionClientPage() {
                     <div className="md:w-2/3 p-6">
                       <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
                         <h3 className="text-2xl font-bold text-gray-900">{capacitacion.title}</h3>
-                        <div className="inline-block bg-primary/10 px-4 py-2 rounded-lg">
-                          <span className="text-xl font-bold text-primary">{capacitacion.precio}</span>
+                        <div>
+                          <div className="inline-block bg-primary/10 px-4 py-2 rounded-lg">
+                            <span className="text-xl font-bold text-primary">{capacitacion.precio}</span>
+                          </div>
+                          <div className="text-xs text-gray-500 mt-1 text-right">
+                            Abonas el primer día del inicio del curso
+                          </div>
                         </div>
                       </div>
                       <p className="text-gray-700 mb-4">{capacitacion.description}</p>
 
-                      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
                         <div className="flex items-start">
                           <MapPin className="h-5 w-5 text-secondary mr-2 mt-0.5" />
                           <div>
                             <div className="font-medium">Modalidad</div>
                             <div className="text-sm text-gray-600">{capacitacion.modalidad}</div>
+                          </div>
+                        </div>
+                        <div className="flex items-start">
+                          <MapPin className="h-5 w-5 text-secondary mr-2 mt-0.5" />
+                          <div>
+                            <div className="font-medium">Ubicación</div>
+                            <div className="text-sm text-gray-600">{capacitacion.ubicacion}</div>
                           </div>
                         </div>
                         <div className="flex items-start">
