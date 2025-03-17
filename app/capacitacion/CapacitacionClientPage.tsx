@@ -34,7 +34,7 @@ export default function CapacitacionClientPage() {
         "Este curso está diseñado para quienes desean convertir sus ideas en proyectos viables. Durante la capacitación, los participantes recibirán conocimientos clave sobre planificación, estrategias de negocio y herramientas para implementar su emprendimiento de manera efectiva.",
       modalidad: "Teórico - Práctico, Presencial",
       destinatarios: "Emprendedores y público general",
-      duracion: "12 horas (6 encuentros de 2 horas cada uno)",
+      duracion: "8 horas (4 encuentros de 2 horas cada uno)",
       fechas: ["Martes 13 de mayo", "Martes 20 de mayo", "Martes 27 de mayo", "Martes 3 de junio"],
       horario: "15:00 a 17:00",
       precio: "$16.000",
@@ -206,12 +206,17 @@ export default function CapacitacionClientPage() {
                         </div>
                       )}
 
-                      <button
-                        onClick={() => setSelectedCapacitacion(capacitacion.id)}
+                      <a
+                        href="#inscripcion"
+                        onClick={(e) => {
+                          e.preventDefault()
+                          setSelectedCapacitacion(capacitacion.id)
+                          document.getElementById("inscripcion")?.scrollIntoView({ behavior: "smooth" })
+                        }}
                         className="inline-flex items-center justify-center rounded-full bg-primary text-white px-6 py-3 text-base font-medium hover:bg-primary/90 transition-colors"
                       >
                         Inscribirme
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>
