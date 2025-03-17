@@ -72,9 +72,9 @@ export default function Home() {
     // Evento 2 - Festival de Jineteada y Folclore
     {
       type: "evento",
-      date: "15 y 16 de marzo de 2025",
+      date: "8 de febrero de 2025",
       time: "12:00 hs",
-      location: "Predio Los Eucaliptos (Villa del Dique)",
+      location: "Centro Tradicionalista Las Espuelas (Villa del Dique)",
       category: "Festival",
       title: "Festival de Jineteada y Folclore",
       description:
@@ -416,7 +416,7 @@ export default function Home() {
                   <div className="flex flex-wrap items-center gap-4 text-white/90">
                     <div className="flex items-center">
                       <Calendar className="w-5 h-5 text-highlight mr-2 flex-shrink-0" />
-                      <span>15 y 16 de marzo de 2025</span>
+                      <span>8 de febrero de 2025</span>
                     </div>
                     <div className="flex items-center">
                       <MapPin className="w-5 h-5 text-highlight mr-2 flex-shrink-0" />
