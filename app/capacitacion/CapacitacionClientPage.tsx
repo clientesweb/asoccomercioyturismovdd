@@ -11,6 +11,7 @@ import InscripcionForm from "@/components/inscripcion-form"
 export default function CapacitacionClientPage() {
   const [selectedCapacitacion, setSelectedCapacitacion] = useState<string | null>(null)
 
+  // Actualizar el array de capacitaciones para incluir las fechas y precios
   const capacitaciones = [
     {
       id: "calidad-humana",
@@ -22,6 +23,7 @@ export default function CapacitacionClientPage() {
       duracion: "8 horas (4 encuentros de 2 horas cada uno)",
       fechas: ["Martes 15 de abril", "Martes 22 de abril", "Martes 29 de abril", "Martes 6 de mayo"],
       horario: "15:00 a 17:00",
+      precio: "$16.000",
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/calidad-humana-al-serviciocliente.jpg-OZveRZISFZ1nZKGru4wWMlucsppc1R.jpeg",
     },
@@ -33,6 +35,9 @@ export default function CapacitacionClientPage() {
       modalidad: "Teórico - Práctico, Presencial",
       destinatarios: "Emprendedores y público general",
       duracion: "12 horas (6 encuentros de 2 horas cada uno)",
+      fechas: ["Martes 13 de mayo", "Martes 20 de mayo", "Martes 27 de mayo", "Martes 3 de junio"],
+      horario: "15:00 a 17:00",
+      precio: "$16.000",
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/crea-tu-emprendimiento-desde-cero.jpg-vQxYkOFtQNYgidTdC4Ehr7jKprU5mJ.jpeg",
       contenidos: [
@@ -139,7 +144,12 @@ export default function CapacitacionClientPage() {
                       </div>
                     </div>
                     <div className="md:w-2/3 p-6">
-                      <h3 className="text-2xl font-bold text-gray-900 mb-4">{capacitacion.title}</h3>
+                      <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
+                        <h3 className="text-2xl font-bold text-gray-900">{capacitacion.title}</h3>
+                        <div className="inline-block bg-primary/10 px-4 py-2 rounded-lg">
+                          <span className="text-xl font-bold text-primary">{capacitacion.precio}</span>
+                        </div>
+                      </div>
                       <p className="text-gray-700 mb-4">{capacitacion.description}</p>
 
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
@@ -206,6 +216,37 @@ export default function CapacitacionClientPage() {
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* Agregar la sección de precios después de la lista de capacitaciones */}
+            <div className="bg-white rounded-xl shadow-sm p-6 md:p-8 mb-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">Precios y promociones</h2>
+              <div className="space-y-4">
+                <div className="flex flex-col md:flex-row md:items-center justify-between p-4 bg-gray-50 rounded-lg">
+                  <div>
+                    <h3 className="text-lg font-medium text-gray-900">Curso individual</h3>
+                    <p className="text-gray-600">Acceso a un curso de tu elección</p>
+                  </div>
+                  <div className="mt-2 md:mt-0">
+                    <span className="text-2xl font-bold text-primary">$16.000</span>
+                  </div>
+                </div>
+
+                <div className="flex flex-col md:flex-row md:items-center justify-between p-4 bg-primary/10 rounded-lg border-2 border-primary">
+                  <div>
+                    <div className="inline-block bg-primary text-white text-xs font-medium px-2 py-1 rounded-full mb-2">
+                      OFERTA
+                    </div>
+                    <h3 className="text-lg font-medium text-gray-900">Pack completo</h3>
+                    <p className="text-gray-600">Acceso a ambos cursos con descuento</p>
+                  </div>
+                  <div className="mt-2 md:mt-0 text-right">
+                    <div className="text-sm text-gray-500 line-through">$32.000</div>
+                    <span className="text-2xl font-bold text-primary">$22.000</span>
+                    <div className="text-sm text-green-600 font-medium">Ahorrás $10.000</div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Formulario de inscripción */}
