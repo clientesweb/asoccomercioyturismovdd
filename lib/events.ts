@@ -136,35 +136,27 @@ export const events: Event[] = [
   {
     slug: "festival-jineteada-folclore",
     title: "Festival de Jineteada y Folclore",
-    date: "15 y 16 de marzo de 2025",
+    date: "8 de febrero de 2025",
     time: "12:00 hs",
     endTime: "00:00 hs",
-    location: "Predio Los Eucaliptos (Villa del Dique)",
+    location: "Centro Tradicionalista Las Espuelas (Villa del Dique)",
     locationDetail: "Ruta Provincial 5, Km 82",
-    organizer: "Asociación de Comercio, Turismo y Afines de Villa del Dique",
+    organizer: "Municipalidad de Villa del Dique",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/476597986_1017876430364615_7571482614932357959_n.jpg-WGw7LfWOpLCiy2w7CX1p2ZykSproQj.jpeg",
     description: `
-      <p>Villa del Dique se prepara para vivir una de las fiestas más tradicionales de la región: el Festival de Jineteada y Folclore. Durante dos días, el Predio Los Eucaliptos se convierte en el escenario perfecto para celebrar nuestras tradiciones gauchas y la música folclórica argentina.</p>
+      <p>Villa del Dique se prepara para vivir una de las fiestas más tradicionales de la región: el Festival de Jineteada y Folclore. El Centro Tradicionalista Las Espuelas se convierte en el escenario perfecto para celebrar nuestras tradiciones gauchas y la música folclórica argentina.</p>
 
       <h3>Programa del Festival:</h3>
 
-      <h4>Sábado 8 de Febrero</h4>
+      <h4>Sábado 8 de febrero</h4>
       <ul>
         <li><strong>12:00 hs</strong> - Apertura del predio y patio de comidas</li>
         <li><strong>14:00 hs</strong> - Inicio de la jineteada</li>
         <li><strong>17:00 hs</strong> - Muestras de destreza gaucha</li>
         <li><strong>19:00 hs</strong> - Peña folclórica</li>
         <li><strong>21:00 hs</strong> - Festival nocturno con artistas invitados</li>
-      </ul>
-
-      <h4>Domingo 16 de marzo</h4>
-      <ul>
-        <li><strong>11:00 hs</strong> - Misa gaucha</li>
-        <li><strong>13:00 hs</strong> - Almuerzo criollo</li>
-        <li><strong>15:00 hs</strong> - Final de jineteada</li>
-        <li><strong>18:00 hs</strong> - Entrega de premios</li>
-        <li><strong>19:00 hs</strong> - Gran cierre con artistas destacados</li>
+        <li><strong>23:30 hs</strong> - Gran cierre con Magui Olave</li>
       </ul>
 
       <h3>Actividades:</h3>
@@ -182,9 +174,14 @@ export const events: Event[] = [
     `,
     speakers: [
       {
-        name: "Tropilla Los Amigos",
-        position: "Tropilla invitada",
-        image: "/placeholder.svg?height=100&width=100&text=LA",
+        name: "La Juntada",
+        position: "Grupo folclórico",
+        image: "/placeholder.svg?height=100&width=100&text=LJ",
+      },
+      {
+        name: 'Jimena la "Negra" Sterpone',
+        position: "Cantante",
+        image: "/placeholder.svg?height=100&width=100&text=JS",
       },
       {
         name: "Los Cantores del Alba",
@@ -192,9 +189,9 @@ export const events: Event[] = [
         image: "/placeholder.svg?height=100&width=100&text=CA",
       },
       {
-        name: "Ballet Municipal",
-        position: "Danzas tradicionales",
-        image: "/placeholder.svg?height=100&width=100&text=BM",
+        name: "Magui Olave",
+        position: "Gran cierre",
+        image: "/placeholder.svg?height=100&width=100&text=MO",
       },
     ],
     tags: ["Tradición", "Folklore", "Jineteada", "Gastronomía", "Familia"],
