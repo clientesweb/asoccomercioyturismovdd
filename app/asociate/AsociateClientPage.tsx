@@ -5,7 +5,7 @@ import type React from "react"
 import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { ChevronRight, CheckCircle2, ArrowRight, Info } from "lucide-react"
+import { ChevronRight, CheckCircle2, ArrowRight, Info } from 'lucide-react'
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 
@@ -556,4 +556,3 @@ ${formData.observaciones ? `*Observaciones:* ${formData.observaciones}` : ""}
     </div>
   )
 }
-
