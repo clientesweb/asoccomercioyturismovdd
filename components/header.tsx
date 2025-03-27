@@ -267,8 +267,8 @@ export default function Header() {
                 <Link href="#" className="block text-white hover:text-secondary py-2">
                   Contacto
                 </Link>
-                <Link href="#" className="block text-white hover:text-secondary py-2">
-                  Ingresar
+                <Link href="/asociate" className="block text-white hover:text-secondary py-2">
+                  Asociate
                 </Link>
               </div>
             </div>
