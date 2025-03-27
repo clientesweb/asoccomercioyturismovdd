@@ -12,6 +12,7 @@ import { getLatestArticles } from "@/lib/articles"
 import { getUpcomingEvents } from "@/lib/events"
 import VideoPlayer from "@/components/video-player"
 import WeatherWidget from "@/components/weather-widget"
+import BannerAsociate from "@/components/banner-asociate"
 
 export default function Home() {
   // Estado para el carrusel de noticias
@@ -625,6 +626,11 @@ export default function Home() {
               ))}
             </div>
           </div>
+        </section>
+
+        {/* Banner Asociate */}
+        <section className="container mx-auto px-4 mb-12">
+          <BannerAsociate />
         </section>
       </main>
 
