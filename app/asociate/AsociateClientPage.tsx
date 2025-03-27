@@ -20,7 +20,7 @@ export default function AsociateClientPage() {
     nombreComercio: "",
     rubroComercio: "",
     direccionComercio: "",
-    localidad: "Villa del Dique",
+    localidad: "Villa del Dique", // Valor fijo
     // Datos adicionales
     tipoSocio: "comerciante", // comerciante, emprendedor, otro
     observaciones: "",
@@ -181,6 +181,8 @@ ${formData.observaciones ? `*Observaciones:* ${formData.observaciones}` : ""}
     "Networking con otros comerciantes y emprendedores",
     "Promoción de tu negocio en guías turísticas locales",
     "Acceso a información privilegiada del sector",
+    "Acceso a bolsa de trabajo para publicar y encontrar oportunidades laborales",
+    "Diseño y distribución de folletería y cartelería publicitaria",
   ]
 
   return (
@@ -235,7 +237,7 @@ ${formData.observaciones ? `*Observaciones:* ${formData.observaciones}` : ""}
         <div className="container mx-auto px-4 py-12">
           <div className="max-w-4xl mx-auto">
             {/* Sección de beneficios */}
-            <div className="bg-white rounded-xl shadow-sm p-6 md:p-8 mb-12">
+            <div className="bg-white rounded-xl shadow-sm p-6 md:p-8 mb-12" id="beneficios">
               <h2 className="text-2xl font-bold text-primary mb-6">Beneficios de ser socio</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {beneficios.map((beneficio, index) => (
@@ -444,20 +446,15 @@ ${formData.observaciones ? `*Observaciones:* ${formData.observaciones}` : ""}
                         <label htmlFor="localidad" className="block text-sm font-medium text-gray-700">
                           Localidad <span className="text-red-500">*</span>
                         </label>
-                        <select
+                        <input
+                          type="text"
                           id="localidad"
                           name="localidad"
-                          value={formData.localidad}
-                          onChange={handleChange}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:outline-none"
-                        >
-                          <option value="Villa del Dique">Villa del Dique</option>
-                          <option value="Villa Rumipal">Villa Rumipal</option>
-                          <option value="Embalse">Embalse</option>
-                          <option value="Santa Rosa de Calamuchita">Santa Rosa de Calamuchita</option>
-                          <option value="Villa General Belgrano">Villa General Belgrano</option>
-                          <option value="Otra">Otra</option>
-                        </select>
+                          value="Villa del Dique"
+                          readOnly
+                          className="w-full px-4 py-2 border border-gray-300 rounded-lg bg-gray-50"
+                        />
+                        <p className="text-xs text-gray-500">Solo se aceptan comercios ubicados en Villa del Dique</p>
                       </div>
                     </div>
                   </div>
