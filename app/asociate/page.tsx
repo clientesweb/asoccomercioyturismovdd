@@ -5,7 +5,7 @@ import type React from "react"
 import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { ChevronRight, CheckCircle2, ArrowRight, Info } from "lucide-react"
+import { ChevronRight, CheckCircle2, ArrowRight, Info } from 'lucide-react'
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 
@@ -20,7 +20,7 @@ export default function AsociateClientPage() {
     nombreComercio: "",
     rubroComercio: "",
     direccionComercio: "",
-    localidad: "Villa del Dique",
+    localidad: "Villa del Dique", // Valor fijo
     // Datos adicionales
     tipoSocio: "comerciante", // comerciante, emprendedor, otro
     observaciones: "",
@@ -181,6 +181,8 @@ ${formData.observaciones ? `*Observaciones:* ${formData.observaciones}` : ""}
     "Networking con otros comerciantes y emprendedores",
     "Promoción de tu negocio en guías turísticas locales",
     "Acceso a información privilegiada del sector",
+    "Acceso a bolsa de trabajo para publicar y encontrar oportunidades laborales",
+    "Diseño y distribución de folletería y cartelería publicitaria",
   ]
 
   return (
@@ -444,20 +446,15 @@ ${formData.observaciones ? `*Observaciones:* ${formData.observaciones}` : ""}
                         <label htmlFor="localidad" className="block text-sm font-medium text-gray-700">
                           Localidad <span className="text-red-500">*</span>
                         </label>
-                        <select
+                        <input
+                          type="text"
                           id="localidad"
                           name="localidad"
-                          value={formData.localidad}
-                          onChange={handleChange}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:outline-none"
-                        >
-                          <option value="Villa del Dique">Villa del Dique</option>
-                          <option value="Villa Rumipal">Villa Rumipal</option>
-                          <option value="Embalse">Embalse</option>
-                          <option value="Santa Rosa de Calamuchita">Santa Rosa de Calamuchita</option>
-                          <option value="Villa General Belgrano">Villa General Belgrano</option>
-                          <option value="Otra">Otra</option>
-                        </select>
+                          value="Villa del Dique"
+                          readOnly
+                          className="w-full px-4 py-2 border border-gray-300 rounded-lg bg-gray-50"
+                        />
+                        <p className="text-xs text-gray-500">Solo se aceptan comercios ubicados en Villa del Dique</p>
                       </div>
                     </div>
                   </div>
@@ -470,93 +467,4 @@ ${formData.observaciones ? `*Observaciones:* ${formData.observaciones}` : ""}
                         <label htmlFor="tipoSocio" className="block text-sm font-medium text-gray-700">
                           Tipo de socio
                         </label>
-                        <select
-                          id="tipoSocio"
-                          name="tipoSocio"
-                          value={formData.tipoSocio}
-                          onChange={handleChange}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:outline-none"
-                        >
-                          <option value="comerciante">Comerciante</option>
-                          <option value="emprendedor">Emprendedor</option>
-                          <option value="otro">Otro</option>
-                        </select>
-                      </div>
-
-                      <div className="space-y-2">
-                        <label htmlFor="observaciones" className="block text-sm font-medium text-gray-700">
-                          Observaciones o comentarios adicionales
-                        </label>
-                        <textarea
-                          id="observaciones"
-                          name="observaciones"
-                          value={formData.observaciones}
-                          onChange={handleChange}
-                          rows={4}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:outline-none"
-                          placeholder="¿Tienes alguna pregunta o comentario adicional?"
-                        ></textarea>
-                      </div>
-
-                      <div className="flex items-start">
-                        <div className="flex items-center h-5">
-                          <input
-                            id="aceptaTerminos"
-                            name="aceptaTerminos"
-                            type="checkbox"
-                            checked={formData.aceptaTerminos}
-                            onChange={handleChange}
-                            className="h-4 w-4 text-primary border-gray-300 rounded focus:ring-primary"
-                          />
-                        </div>
-                        <div className="ml-3 text-sm">
-                          <label htmlFor="aceptaTerminos" className="text-gray-700">
-                            Acepto los{" "}
-                            <Link href="#" className="text-primary hover:underline">
-                              términos y condiciones
-                            </Link>{" "}
-                            de la Asociación de Comercio, Turismo y Afines de Villa del Dique{" "}
-                            <span className="text-red-500">*</span>
-                          </label>
-                          {errors.aceptaTerminos && (
-                            <p className="text-red-500 text-xs mt-1">{errors.aceptaTerminos}</p>
-                          )}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Nota informativa */}
-                  <div className="bg-blue-50 p-4 rounded-lg flex items-start">
-                    <Info className="h-5 w-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <div className="text-sm text-blue-700">
-                      <p className="font-medium mb-1">Información importante</p>
-                      <p>
-                        Al enviar este formulario, recibirás un mensaje en WhatsApp con los datos de tu solicitud y la
-                        información de pago. Una vez realizado el pago, envíanos el comprobante para completar tu
-                        asociación.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div>
-                    <button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="w-full bg-primary hover:bg-primary/90 text-white font-medium py-3 px-6 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-70"
-                    >
-                      {isSubmitting ? "Enviando..." : "Enviar solicitud"}
-                    </button>
-                  </div>
-                </form>
-              )}
-            </div>
-          </div>
-        </div>
-      </main>
-
-      <Footer />
-    </div>
-  )
-}
-
+           
