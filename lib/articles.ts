@@ -67,7 +67,7 @@ export const articles: Article[] = [
     title: "Alojamientos de Excelencia en Villa del Dique",
     date: "28 de marzo de 2025",
     category: "TURISMO",
-    author: "Equipo de Comunicación ACTyA",
+    author: "Laura Gigens",
     readTime: "7 minutos",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/amanecer-en-el-lago.jpg-4NYA9oUjajzw79mgcvh6VOZ07QyalU.jpeg",
@@ -76,8 +76,8 @@ export const articles: Article[] = [
 
 <p>Con un ambiente natural y acogedor, Villa del Dique no solo es famosa por sus impresionantes paisajes que yacen a la vera del Embalse del Río Tercero, sino también por la excelente infraestructura de alojamiento que ofrece a los turistas. Si estás en la búsqueda de un lugar tranquilo para descansar, te ofrecemos cabañas rodeadas de naturaleza, hoteles, hosterías y casas de alquiler turístico con vistas espectaculares. En Villa del Dique encontrarás todo lo que necesitas para hacer de tu salida una experiencia única e irrepetible.</p>
 
-<div class="relative h-[400px] rounded-xl overflow-hidden my-8">
-  <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/establecimiento-1486.jpg-M6uvJh7giEAVfdE2QC6DTmU3slFwBM.jpeg" alt="Vista panorámica del lago en Villa del Dique" class="object-cover w-full h-full" />
+<div class="my-8">
+  <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/establecimiento-1486.jpg-M6uvJh7giEAVfdE2QC6DTmU3slFwBM.jpeg" alt="Vista panorámica del lago en Villa del Dique" class="w-full rounded-xl max-h-[500px] object-contain mx-auto" />
 </div>
 
 <p>Contamos con alojamiento para todos los gustos, es uno de los principales servicios para ofrecerte compiladas en diferentes modalidades, repartidas en cabañas, hoteles, hosterías y casas de alquiler turístico, contando con la ambientación y privacidad necesaria para quienes buscan confort. Para los más aventureros tenemos un camping municipal que ofrece área de acampe, baños, vestuarios, electricidad, agua caliente y fría, contando también con una pileta olímpica incluida dentro del mismo servicio, todo rodeado en un marco natural junto al lago añadiéndole una vista espectacular de nuestro cerro emblema denominado Cerro de La Cruz, todo invita al disfrute y un contacto directo con la naturaleza.</p>
@@ -88,8 +88,8 @@ export const articles: Article[] = [
 
 <p>El Camping y el hospedaje rural están dispuesto si prefieres un contacto más directo con la naturaleza, donde puedes disfrutar de la frescura de la región, rodeado de verdes paisajes, en un entorno seguro y amigable.</p>
 
-<div class="relative h-[400px] rounded-xl overflow-hidden my-8">
-  <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2024-01-30.jpg-h53ZcuilUjfsjs25OaIiWNj2vglEaJ.jpeg" alt="Pileta olímpica en el camping municipal de Villa del Dique" class="object-cover w-full h-full" />
+<div class="my-8">
+  <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2024-01-30.jpg-h53ZcuilUjfsjs25OaIiWNj2vglEaJ.jpeg" alt="Pileta olímpica en el camping municipal de Villa del Dique" class="w-full rounded-xl max-h-[500px] object-contain mx-auto" />
 </div>
 
 <h2>¿Por qué te ofrecemos Villa del Dique como opción de alojamiento?</h2>
@@ -106,8 +106,8 @@ export const articles: Article[] = [
   <li><strong>Infraestructura y Servicios Completos:</strong> En los alojamientos de Villa del Dique contamos con instalaciones modernas, servicios de calidad que te garantizarán una estancia cómoda y agradable. Las ofertas incluyen en sus servicios, piscinas, spa, restaurantes, wifi, espacios de recreación, alguna refrigeración, garantizando así que tu estancia y de los que la compartan contigo sea de la mejor.</li>
 </ol>
 
-<div class="relative h-[400px] rounded-xl overflow-hidden my-8">
-  <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/QEQQWXO7B5CTFDCKT2PCCUR3KE.jpg-YWTY5P4ZlPDWB299J91pY2jRLEyoqD.jpeg" alt="Actividades acuáticas en el lago de Villa del Dique" class="object-cover w-full h-full" />
+<div class="my-8">
+  <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/QEQQWXO7B5CTFDCKT2PCCUR3KE.jpg-YWTY5P4ZlPDWB299J91pY2jRLEyoqD.jpeg" alt="Actividades acuáticas en el lago de Villa del Dique" class="w-full rounded-xl max-h-[500px] object-contain mx-auto" />
 </div>
 
 <h2>Conclusión</h2>
@@ -120,8 +120,8 @@ export const articles: Article[] = [
 
 <p>Ya sabes, que sea para una escapada romántica, unas vacaciones en familia o una aventura especial. Aquí te ofreceremos las mejores plazas para una visita memorable.</p>
 
-<div class="relative h-[400px] rounded-xl overflow-hidden my-8">
-  <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/amanecer-en-el-lago.jpg-4NYA9oUjajzw79mgcvh6VOZ07QyalU.jpeg" alt="Vista aérea de cabañas junto al lago en Villa del Dique" class="object-cover w-full h-full" />
+<div class="my-8">
+  <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/amanecer-en-el-lago.jpg-4NYA9oUjajzw79mgcvh6VOZ07QyalU.jpeg" alt="Vista aérea de cabañas junto al lago en Villa del Dique" class="w-full rounded-xl max-h-[500px] object-contain mx-auto" />
 </div>
 
 <h2>Información Útil</h2>
