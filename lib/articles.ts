@@ -67,7 +67,7 @@ export const articles: Article[] = [
     title: "Alojamientos de Excelencia en Villa del Dique",
     date: "28 de marzo de 2025",
     category: "TURISMO",
-    author: "Laura Gigena",
+    author: "Laura Cecilia Gigena",
     readTime: "7 minutos",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/amanecer-en-el-lago.jpg-4NYA9oUjajzw79mgcvh6VOZ07QyalU.jpeg",
