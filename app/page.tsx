@@ -26,7 +26,9 @@ export default function Home() {
   const latestArticles = getLatestArticles(3)
   const upcomingEvents = getUpcomingEvents(2)
 
-  // Combinar noticias y eventos para el carrusel
+  // Modificar el array heroSlides para eliminar la duplicación del artículo "Alojamientos de Excelencia"
+  // Reemplazar el array heroSlides actual con este:
+
   const heroSlides = [
     // Pascuas Serranas 2025 (primero)
     {
@@ -57,15 +59,14 @@ export default function Home() {
     // Bienvenida (tercero)
     {
       type: "noticia",
-      date: latestArticles[0]?.date || "9 de marzo de 2025",
-      category: latestArticles[0]?.category || "Institucional",
-      title: latestArticles[0]?.title || "Bienvenidos a la Asociación de Comercio y Turismo de Villa del Dique",
+      date: "17 de marzo de 2025",
+      category: "INSTITUCIONAL",
+      title: "Bienvenidos a la Asociación de Comercio y Turismo de Villa del Dique",
       description:
         "Conoce nuestra asociación, nuestros objetivos y todo lo que Villa del Dique tiene para ofrecer a visitantes y comerciantes.",
       image:
-        latestArticles[0]?.image ||
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/villa-del-dieque-scaled-1.jpg-bhcArDy6gzaLSUqLV3DZZwHYm9EWli.jpeg",
-      href: `/noticias/${latestArticles[0]?.slug || "bienvenidos-asociacion-comercio-turismo"}`,
+      href: "/noticias/bienvenidos-asociacion-comercio-turismo",
     },
     // Evento 1 - Viernes Peatonales (cuarto)
     {
@@ -94,6 +95,17 @@ export default function Home() {
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/476597986_1017876430364615_7571482614932357959_n.jpg-WGw7LfWOpLCiy2w7CX1p2ZykSproQj.jpeg",
       href: "/eventos/festival-jineteada-folclore",
+    },
+    // Capacitaciones (sexto - nuevo slide)
+    {
+      type: "noticia",
+      date: "17 de marzo de 2025",
+      category: "COMUNICADOS DE PRENSA",
+      title: "La Asociación lanza un programa de capacitaciones para potenciar el turismo y comercio local",
+      description:
+        "Nuevas capacitaciones dirigidas a emprendedores, comerciantes y alojamientos para mejorar la atención al cliente y potenciar los negocios locales.",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2.jpg-aIECL47jNFbR4BbMKz2iHb0BFPJYHx.jpeg",
+      href: "/noticias/asociacion-lanza-capacitaciones-para-turismo-comercio",
     },
   ]
 
