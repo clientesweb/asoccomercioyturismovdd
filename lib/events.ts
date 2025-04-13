@@ -67,8 +67,115 @@ function dateStringToTimestamp(dateString: string): number {
   return new Date(year, month, day).getTime()
 }
 
-// Update the events array to only include these two events with detailed information
+// Update the events array to include these two events with detailed information
 export const events: Event[] = [
+  {
+    slug: "pascuas-serranas-2025",
+    title: "Pascuas Serranas 2025: Tradición, sabor y cultura",
+    date: "19 de abril de 2025",
+    time: "11:00 hs",
+    endTime: "18:00 hs",
+    location: "Plaza San Martín (Villa del Dique)",
+    locationDetail: "Frente a la parroquia Nuestra Señora de Pompeya",
+    organizer: "Municipalidad de Villa del Dique",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/SaveInsta.to_489520611_18072294655871230_1356147591489562096_n.jpg-Q0dAZXRWD9KZLV4v2sXMrjhBjA95Th.jpeg",
+    description: `
+      <p>La Municipalidad de Villa del Dique invita a vecinos, turistas y visitantes a disfrutar de la edición 2025 de Pascuas Serranas, un evento que ya se ha convertido en una tradición en la región. Enmarcado en la celebración de Semana Santa, este encuentro cultural y gastronómico celebra por cuarto año consecutivo las raíces, sabores y costumbres locales.</p>
+      
+      <p>La gran cita será el sábado 19 de abril, de 11 a 18 horas, en la plaza San Martín, frente a la parroquia Nuestra Señora de Pompeya. La jornada promete una experiencia única para toda la familia, con una amplia variedad de actividades, música en vivo y propuestas gastronómicas que deleitarán todos los sentidos.</p>
+      
+      <p>Este año, la gran novedad será la <strong>degustación de pejerrey en distintas preparaciones</strong>, disponible para todo el público.</p>
+      
+      <div class="my-8">
+        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/SaveInsta.to_489520611_18072294655871230_1356147591489562096_n.jpg-Q0dAZXRWD9KZLV4v2sXMrjhBjA95Th.jpeg" alt="Pascuas Serranas 2025 - Degustación de Pejerrey" class="w-full rounded-xl max-h-[500px] object-contain mx-auto" />
+      </div>
+      
+      <h2>Programación artística</h2>
+      
+      <p>La grilla artística reunirá destacados talentos regionales:</p>
+      
+      <ul>
+        <li>Dúo de Arpas: Adolfo Meza y Natalia Casola</li>
+        <li>Banda de flamenco con bailarines en vivo</li>
+        <li>Alma Argentina: música folklórica</li>
+        <li>Grupos de danzas folklóricas de Villa del Dique</li>
+        <li>Academia de Folklore y Malambo "Criollos del Sauce" de Villa General Belgrano</li>
+      </ul>
+      
+      <h2>Actividades destacadas</h2>
+      
+      <p>Además de la propuesta musical, el evento contará con:</p>
+      
+      <ul>
+        <li><strong>Degustación pública de pejerrey</strong></li>
+        <li><strong>Charla y degustación de gin artesanal</strong></li>
+        <li>Espacios de recreación familiar:
+          <ul>
+            <li>Juegos de kermés</li>
+            <li>Plaza didáctica con juegos</li>
+            <li>Intervención artística de payasas</li>
+          </ul>
+        </li>
+      </ul>
+      
+      <h2>Propuesta gastronómica</h2>
+      
+      <p>La oferta culinaria será variada y abundante. En la sección salada se podrán encontrar platos como:</p>
+      
+      <ul>
+        <li>Cazuela de mariscos</li>
+        <li>Empanadas de pescado</li>
+        <li>Ñoquis y tallarines con salsa de mariscos</li>
+        <li>Rabas y conos de pescado frito</li>
+        <li>Sándwiches de vacío y bondiola a la llama</li>
+        <li>Empanadas y pollo al disco</li>
+      </ul>
+      
+      <p>Para el postre y la merienda, habrá:</p>
+      
+      <ul>
+        <li>Café y chocolate caliente</li>
+        <li>Rolls de canela y croissants rellenos</li>
+        <li>Productos de masa madre</li>
+      </ul>
+      
+      <p>Las bebidas incluirán jugos naturales, licuados y gin artesanal.</p>
+      
+      <h2>Otros espacios</h2>
+      
+      <p>La jornada también contará con un puesto de huevos de Pascua y un paseo de artesanos y emprendedores, ideal para quienes deseen llevarse un recuerdo o conocer el trabajo de los productores locales.</p>
+      
+      <p>Pascuas Serranas 2025 es una excelente oportunidad para reencontrarse con la tradición, disfrutar de la gastronomía y vivir una jornada inolvidable en familia. ¡Están todos invitados!</p>
+      
+      <p>Para más información, sigue a la Municipalidad de Villa del Dique en Instagram: <a href="https://www.instagram.com/munivilladeldique" target="_blank" rel="noopener noreferrer">@munivilladeldique</a></p>
+    `,
+    speakers: [
+      {
+        name: "Dúo de Arpas",
+        position: "Adolfo Meza y Natalia Casola",
+        image: "/placeholder.svg?height=100&width=100&text=Dúo+Arpas",
+      },
+      {
+        name: "Banda de flamenco",
+        position: "Con bailarines en vivo",
+        image: "/placeholder.svg?height=100&width=100&text=Flamenco",
+      },
+      {
+        name: "Alma Argentina",
+        position: "Música folklórica",
+        image: "/placeholder.svg?height=100&width=100&text=Folklore",
+      },
+      {
+        name: "Criollos del Sauce",
+        position: "Academia de Folklore y Malambo",
+        image: "/placeholder.svg?height=100&width=100&text=Malambo",
+      },
+    ],
+    tags: ["Gastronomía", "Música en vivo", "Folklore", "Semana Santa", "Familia", "Pejerrey"],
+    relatedEvents: ["viernes-peatonales", "festival-jineteada-folclore"],
+    registrationLink: null,
+  },
   {
     slug: "viernes-peatonales",
     title: "Viernes Peatonales",
@@ -130,7 +237,7 @@ export const events: Event[] = [
       },
     ],
     tags: ["Verano", "Música en vivo", "Gastronomía", "Artesanías", "Familia"],
-    relatedEvents: ["festival-jineteada-folclore"],
+    relatedEvents: ["festival-jineteada-folclore", "pascuas-serranas-2025"],
     registrationLink: null,
   },
   {
@@ -198,7 +305,7 @@ export const events: Event[] = [
       },
     ],
     tags: ["Tradición", "Folklore", "Jineteada", "Gastronomía", "Familia"],
-    relatedEvents: ["viernes-peatonales"],
+    relatedEvents: ["viernes-peatonales", "pascuas-serranas-2025"],
     registrationLink: "https://www.actya.com.ar/eventos/festival-jineteada",
   },
 ]
@@ -256,4 +363,3 @@ export function getAllEvents(): Event[] {
     return aTimestamp - bTimestamp
   })
 }
-
