@@ -34,4 +34,3 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     description: evento.description.substring(0, 160).replace(/<[^>]*>/g, ""),
   }
 }
-
