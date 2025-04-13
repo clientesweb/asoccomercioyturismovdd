@@ -24,6 +24,7 @@ import {
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { events } from "@/lib/events"
+import EventSchema from "@/components/schema/event-schema"
 
 interface EventoDetalleClientProps {
   slug: string
@@ -79,6 +80,9 @@ export default function EventoDetalleClient({ slug }: EventoDetalleClientProps) 
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
+
+      {/* Schema.org para SEO */}
+      {evento.slug === "pascuas-serranas-2025" && <EventSchema event={evento} />}
 
       <main className="flex-grow bg-gray-50">
         {/* Breadcrumbs */}
@@ -145,10 +149,10 @@ export default function EventoDetalleClient({ slug }: EventoDetalleClientProps) 
                 )}
               </div>
 
-              {/* Disertantes */}
+              {/* Artistas invitados */}
               {evento.speakers && evento.speakers.length > 0 && (
                 <div className="bg-white rounded-xl shadow-sm p-6 md:p-8 mb-8">
-                  <h2 className="text-xl font-bold text-gray-900 mb-6">Disertantes</h2>
+                  <h2 className="text-xl font-bold text-gray-900 mb-6">Artistas invitados</h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {evento.speakers.map((speaker, index) => (
                       <div key={index} className="flex items-center">
@@ -369,4 +373,3 @@ export default function EventoDetalleClient({ slug }: EventoDetalleClientProps) 
     </div>
   )
 }
-
