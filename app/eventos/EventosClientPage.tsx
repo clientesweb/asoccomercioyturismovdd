@@ -45,7 +45,7 @@ export default function EventosClientPage() {
       </div>
 
       <main className="flex-grow bg-gray-50">
-        <div className="container mx-auto px-4 py-8">
+        <div className="container mx-auto px-4 py-12">
           {/* Banner publicitario */}
           <div className="rounded-2xl overflow-hidden mb-12">
             <Image
@@ -61,13 +61,48 @@ export default function EventosClientPage() {
             Eventos
           </h2>
 
-          {/* Lista de eventos */}
           <div className="grid gap-6">
+            {/* Pascuas Serranas 2025 */}
+            <div className="bg-gradient-to-br from-highlight to-highlight/80 rounded-3xl overflow-hidden p-8 text-primary">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+                <div className="space-y-4">
+                  <div className="flex flex-wrap items-center gap-4 text-primary/90">
+                    <div className="flex items-center">
+                      <Calendar className="w-5 h-5 mr-2" />
+                      <span>19 de abril de 2025</span>
+                    </div>
+                    <div className="flex items-center">
+                      <MapPin className="w-5 h-5 mr-2" />
+                      <span>Plaza San Martín</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Clock className="w-5 h-5 mr-2" />
+                      <span>11:00 a 18:00 hs</span>
+                    </div>
+                  </div>
+                  <h3 className="text-2xl font-bold">Pascuas Serranas 2025</h3>
+                  <p className="text-primary/80 line-clamp-2">
+                    Tradición, sabor y cultura en Villa del Dique. Degustación de pejerrey, música en vivo, actividades
+                    para toda la familia y mucho más.
+                  </p>
+                </div>
+                <div className="mt-4 md:mt-0">
+                  <Link
+                    href="/eventos/pascuas-serranas-2025"
+                    className="inline-flex items-center px-6 py-3 rounded-full border-2 border-primary text-primary hover:bg-primary/10 transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                  >
+                    Ver evento
+                    <span className="ml-2">→</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
             {/* Viernes Peatonales */}
             <div className="bg-gradient-to-br from-primary to-secondary rounded-3xl overflow-hidden p-8 text-white">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                 <div className="space-y-4">
-                  <div className="flex items-center space-x-6 text-highlight">
+                  <div className="flex flex-wrap items-center gap-4 text-highlight">
                     <div className="flex items-center">
                       <Calendar className="w-5 h-5 mr-2" />
                       <span>Todos los viernes de verano</span>
@@ -103,7 +138,7 @@ export default function EventosClientPage() {
             <div className="bg-gradient-to-br from-accent to-accent/80 rounded-3xl overflow-hidden p-8 text-white">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                 <div className="space-y-4">
-                  <div className="flex items-center space-x-6 text-highlight">
+                  <div className="flex flex-wrap items-center gap-4 text-highlight">
                     <div className="flex items-center">
                       <Calendar className="w-5 h-5 mr-2" />
                       <span>8 de febrero de 2025</span>
@@ -142,4 +177,3 @@ export default function EventosClientPage() {
     </div>
   )
 }
-
