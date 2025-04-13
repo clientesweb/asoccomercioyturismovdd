@@ -1,4 +1,6 @@
 import type { MetadataRoute } from "next"
+import { events } from "@/lib/events"
+import { articles } from "@/lib/articles"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.villadeldique.org"
@@ -49,32 +51,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ] as MetadataRoute.Sitemap
 
-  // Aquí podrías agregar páginas dinámicas como noticias y eventos
-  // Esto sería ideal hacerlo de forma dinámica con datos reales
-  // Actualizar el sitemap para incluir solo las noticias que mantenemos
-  const noticiasPages = [
-    "bienvenidos-asociacion-comercio-turismo",
-    "asociacion-lanza-capacitaciones-para-turismo-comercio",
-  ].map((slug) => ({
-    url: `${baseUrl}/noticias/${slug}`,
+  // Páginas de eventos
+  const eventosPages = events.map((evento) => ({
+    url: `${baseUrl}/eventos/${evento.slug}`,
+    lastModified: new Date(),
+    changeFrequency: evento.slug === "pascuas-serranas-2025" ? "daily" : "weekly",
+    priority: evento.slug === "pascuas-serranas-2025" ? 0.9 : 0.8,
+  })) as MetadataRoute.Sitemap
+
+  // Páginas de noticias
+  const noticiasPages = articles.map((articulo) => ({
+    url: `${baseUrl}/noticias/${articulo.slug}`,
     lastModified: new Date(),
     changeFrequency: "weekly",
     priority: 0.8,
   })) as MetadataRoute.Sitemap
 
-  const eventosPages = [
-    "mercados-mundo-oportunidades-brasil",
-    "la-agi-impacto-comunidad",
-    "perspectivas-economicas-segundo-trimestre",
-    "foro-comercio-internacional-mercados-asia",
-    "webinar-transformacion-digital-comercio-minorista",
-  ].map((slug) => ({
-    url: `${baseUrl}/eventos/${slug}`,
-    lastModified: new Date(),
-    changeFrequency: "weekly",
-    priority: 0.8,
-  })) as MetadataRoute.Sitemap
-
-  return [...staticPages, ...noticiasPages, ...eventosPages]
+  return [...staticPages, ...eventosPages, ...noticiasPages]
 }
-
