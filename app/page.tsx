@@ -28,7 +28,33 @@ export default function Home() {
 
   // Combinar noticias y eventos para el carrusel
   const heroSlides = [
-    // Bienvenida (siempre primera)
+    // Pascuas Serranas 2025 (primero)
+    {
+      type: "evento",
+      date: "19 de abril de 2025",
+      time: "11:00 hs",
+      location: "Plaza San Martín (Villa del Dique)",
+      category: "Evento",
+      title: "Pascuas Serranas 2025: Tradición, sabor y cultura",
+      description:
+        "Disfruta de la edición 2025 de Pascuas Serranas con degustación de pejerrey, música en vivo, actividades para toda la familia y una amplia propuesta gastronómica.",
+      image:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/SaveInsta.to_489520611_18072294655871230_1356147591489562096_n.jpg-Q0dAZXRWD9KZLV4v2sXMrjhBjA95Th.jpeg",
+      href: "/eventos/pascuas-serranas-2025",
+    },
+    // Alojamientos de Excelencia (segundo)
+    {
+      type: "noticia",
+      date: "28 de marzo de 2025",
+      category: "TURISMO",
+      title: "Alojamientos de Excelencia en Villa del Dique",
+      description:
+        "Descubre las mejores opciones de alojamiento en Villa del Dique, desde cabañas rodeadas de naturaleza hasta hoteles con vistas espectaculares al lago.",
+      image:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/amanecer-en-el-lago.jpg-4NYA9oUjajzw79mgcvh6VOZ07QyalU.jpeg",
+      href: "/noticias/alojamientos-excelencia-villa-dique",
+    },
+    // Bienvenida (tercero)
     {
       type: "noticia",
       date: latestArticles[0]?.date || "9 de marzo de 2025",
@@ -41,7 +67,7 @@ export default function Home() {
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/villa-del-dieque-scaled-1.jpg-bhcArDy6gzaLSUqLV3DZZwHYm9EWli.jpeg",
       href: `/noticias/${latestArticles[0]?.slug || "bienvenidos-asociacion-comercio-turismo"}`,
     },
-    // Evento 1 - Viernes Peatonales
+    // Evento 1 - Viernes Peatonales (cuarto)
     {
       type: "evento",
       date: "Todos los viernes de verano",
@@ -55,22 +81,7 @@ export default function Home() {
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/multimedia.normal.9a23a2fb2927271e.56444420564945524e45532043414c4c454a45524f532030315f6e6f726d616c2e6a7067%20%281%29.jpg-JY4MsEUdsbFL0FOp5Mp3IjT88si3Kz.jpeg",
       href: "/eventos/viernes-peatonales",
     },
-    // Noticia 2 - Capacitaciones
-    {
-      type: "noticia",
-      date: latestArticles[1]?.date || "9 de marzo de 2025",
-      category: latestArticles[1]?.category || "Comunicados de Prensa",
-      title:
-        latestArticles[1]?.title ||
-        "La Asociación lanza un programa de capacitaciones para potenciar el turismo y comercio local",
-      description:
-        "La Asociación de Comercio y Turismo de Villa del Dique sigue impulsando el crecimiento del sector con un nuevo programa de capacitaciones.",
-      image:
-        latestArticles[1]?.image ||
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2.jpg-aIECL47jNFbR4BbMKz2iHb0BFPJYHx.jpeg",
-      href: `/noticias/${latestArticles[1]?.slug || "asociacion-lanza-capacitaciones-para-turismo-comercio"}`,
-    },
-    // Evento 2 - Festival de Jineteada y Folclore
+    // Evento 2 - Festival de Jineteada y Folclore (quinto)
     {
       type: "evento",
       date: "8 de febrero de 2025",
@@ -370,7 +381,43 @@ export default function Home() {
             Sumate a <span className="text-primary font-medium">nuestros eventos</span>
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Pascuas Serranas 2025 */}
+            <div
+              className="relative overflow-hidden rounded-3xl h-[250px] md:h-[300px] group"
+              style={{
+                background: "linear-gradient(135deg, #FFC107, #FFE082)",
+              }}
+            >
+              <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-between">
+                <div className="space-y-2">
+                  <div className="flex flex-wrap items-center gap-4 text-primary/90">
+                    <div className="flex items-center">
+                      <Calendar className="w-5 h-5 text-primary mr-2 flex-shrink-0" />
+                      <span>19 de abril de 2025</span>
+                    </div>
+                    <div className="flex items-center">
+                      <MapPin className="w-5 h-5 text-primary mr-2 flex-shrink-0" />
+                      <span>Plaza San Martín</span>
+                    </div>
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-medium text-primary mt-4 line-clamp-3">
+                    Pascuas Serranas 2025
+                  </h3>
+                </div>
+                <Link
+                  href="/eventos/pascuas-serranas-2025"
+                  className="inline-flex items-center text-primary hover:opacity-80 transition-opacity focus:outline-none focus:underline"
+                  aria-label="Ver evento: Pascuas Serranas 2025"
+                >
+                  Ver evento{" "}
+                  <span className="ml-2" aria-hidden="true">
+                    →
+                  </span>
+                </Link>
+              </div>
+            </div>
+
             {/* Viernes Peatonales */}
             <div
               className="relative overflow-hidden rounded-3xl h-[250px] md:h-[300px] group"
@@ -591,7 +638,7 @@ export default function Home() {
                     alt="Logo ACTyA"
                     width={120}
                     height={120}
-                    className="w-20 h-20 md:w-24 md:w-24 object-contain bg-white/20 p-2 rounded-xl"
+                    className="w-20 h-20 md:w-24 md:h-24 object-contain bg-white/20 p-2 rounded-xl"
                   />
                   <div>
                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 md:mb-6">
@@ -645,4 +692,3 @@ export default function Home() {
     </div>
   )
 }
-
