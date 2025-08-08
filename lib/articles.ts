@@ -63,6 +63,57 @@ function dateStringToTimestamp(dateString: string): number {
 // Modificar el array de artículos para incluir el nuevo artículo
 export const articles: Article[] = [
   {
+    slug: "asociacion-impulsa-visibilidad-negocios-locales-carteleria",
+    title: "La Asociación de Comercio impulsa la visibilidad de los negocios locales con nueva cartelería en los ingresos a Villa del Dique",
+    date: "8 de agosto de 2025",
+    category: "COMUNICADOS DE PRENSA",
+    author: "Equipo de Comunicación ACTyA",
+    readTime: "4 minutos",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-08-08%20at%2010.27.03%20AM-J5RzM1ao0f9xYbWGAUUmQDm2vsmsLc.webp",
+    content: `
+<p>La Asociación de Comercio, Turismo y Afines de Villa del Dique anunció la renovación de los carteles de ingreso a la localidad, ofreciendo a los comerciantes, emprendedores y prestadores de servicios un espacio publicitario exclusivo para promocionar sus negocios durante todo el año.</p>
+
+<p>Con esta iniciativa, buscamos potenciar la identidad comercial de Villa del Dique, generando mayor alcance para cada emprendimiento que decida sumarse, y asegurando que tanto visitantes como residentes identifiquen la oferta local desde el primer momento que ingresan a la localidad.</p>
+
+<div class="my-8">
+  <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-08-08%20at%2010.27.03%20AM-J5RzM1ao0f9xYbWGAUUmQDm2vsmsLc.webp" alt="Cartel publicitario en ingreso a Villa del Dique con espacios para negocios locales" class="w-full rounded-xl max-h-[500px] object-contain mx-auto" />
+</div>
+
+<p>Los dos carteles estarán ubicados en puntos estratégicos de acceso y contarán con cinco espacios publicitarios cada uno, haciendo un total de 10 oportunidades para que las marcas locales se destaquen. El costo anual por espacio es de $150.000, con inicio de exhibición el 1 de septiembre.</p>
+
+<h2>📌 Detalles clave de la propuesta:</h2>
+
+<ul>
+  <li><strong>Ubicación:</strong> Ingresos principales a Villa del Dique</li>
+  <li><strong>Cantidad de carteles:</strong> 2</li>
+  <li><strong>Espacios publicitarios por cartel:</strong> 5</li>
+  <li><strong>Total de espacios disponibles:</strong> 10</li>
+  <li><strong>Costo anual:</strong> $150.000 por espacio</li>
+  <li><strong>Inicio de exhibición:</strong> 1 de septiembre</li>
+</ul>
+
+<div class="my-8">
+  <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-08-08%20at%2010.27.03%20AM%20%281%29-jhJDXtNlHwK4b0xyFPDlFK6nxChZ1P.webp" alt="Segundo cartel publicitario mostrando deportes acuáticos y negocios locales" class="w-full rounded-xl max-h-[500px] object-contain mx-auto" />
+</div>
+
+<p>Además de ser una estrategia publicitaria efectiva, esta acción es también un aporte directo al fortalecimiento del comercio local, ya que los fondos recaudados permitirán a la Asociación continuar impulsando actividades y beneficios para sus miembros.</p>
+
+<h2>Una oportunidad única para tu negocio</h2>
+
+<p>Esta iniciativa representa una oportunidad excepcional para que los comercios locales aumenten su visibilidad y lleguen tanto a turistas como a residentes de la zona. Los carteles están estratégicamente ubicados en los principales accesos a Villa del Dique, garantizando máxima exposición durante todo el año.</p>
+
+<p>La propuesta incluye diseño profesional y mantenimiento de los espacios publicitarios, asegurando que cada negocio se presente de manera atractiva y profesional.</p>
+
+<h2>Contacto y reservas</h2>
+
+<p>📲 Para reservar tu espacio o conocer las formas de pago, comunicate al <a href="https://wa.me/5493512082818" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary/80 font-medium">351 208 2818</a>.</p>
+
+<p>No pierdas la oportunidad de formar parte de esta innovadora propuesta que fortalece el comercio local y potencia la identidad de Villa del Dique como destino turístico de excelencia.</p>
+`,
+    tags: ["Comercio Local", "Publicidad", "Cartelería", "Emprendedores", "Villa del Dique"],
+    relatedNews: ["bienvenidos-asociacion-comercio-turismo", "asociacion-lanza-capacitaciones-para-turismo-comercio"],
+  },
+  {
     slug: "alojamientos-excelencia-villa-dique",
     title: "Alojamientos de Excelencia en Villa del Dique",
     date: "28 de marzo de 2025",
@@ -276,4 +327,3 @@ export function getArticleBySlug(slug: string): Article | undefined {
 export function getRelatedArticles(slugs: string[]): Article[] {
   return articles.filter((article) => slugs.includes(article.slug))
 }
-
