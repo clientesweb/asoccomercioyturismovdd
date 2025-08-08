@@ -5,7 +5,7 @@ import type React from "react"
 import { useState, useEffect, useCallback, useRef } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { CalendarIcon, MapPinIcon, ChevronLeft, ChevronRight, Clock, Calendar, MapPin } from "lucide-react"
+import { CalendarIcon, MapPinIcon, ChevronLeft, ChevronRight, Clock, Calendar, MapPin } from 'lucide-react'
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { getLatestArticles } from "@/lib/articles"
@@ -30,19 +30,16 @@ export default function Home() {
   // Reemplazar el array heroSlides actual con este:
 
   const heroSlides = [
-    // Pascuas Serranas 2025 (primero)
+    // Nueva cartelería (primero)
     {
-      type: "evento",
-      date: "19 de abril de 2025",
-      time: "11:00 hs",
-      location: "Plaza San Martín (Villa del Dique)",
-      category: "Evento",
-      title: "Pascuas Serranas 2025: Tradición, sabor y cultura",
+      type: "noticia",
+      date: "8 de agosto de 2025",
+      category: "COMUNICADOS DE PRENSA",
+      title: "La Asociación impulsa la visibilidad de los negocios locales con nueva cartelería",
       description:
-        "Disfruta de la edición 2025 de Pascuas Serranas con degustación de pejerrey, música en vivo, actividades para toda la familia y una amplia propuesta gastronómica.",
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/SaveInsta.to_489520611_18072294655871230_1356147591489562096_n.jpg-Q0dAZXRWD9KZLV4v2sXMrjhBjA95Th.jpeg",
-      href: "/eventos/pascuas-serranas-2025",
+        "Nuevos carteles publicitarios en los ingresos a Villa del Dique ofrecen espacios exclusivos para comerciantes y emprendedores locales.",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-08-08%20at%2010.27.03%20AM-J5RzM1ao0f9xYbWGAUUmQDm2vsmsLc.webp",
+      href: "/noticias/asociacion-impulsa-visibilidad-negocios-locales-carteleria",
     },
     // Alojamientos de Excelencia (segundo)
     {
@@ -96,7 +93,7 @@ export default function Home() {
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/476597986_1017876430364615_7571482614932357959_n.jpg-WGw7LfWOpLCiy2w7CX1p2ZykSproQj.jpeg",
       href: "/eventos/festival-jineteada-folclore",
     },
-    // Capacitaciones (sexto - nuevo slide)
+    // Capacitaciones (sexto)
     {
       type: "noticia",
       date: "17 de marzo de 2025",
