@@ -63,17 +63,82 @@ function dateStringToTimestamp(dateString: string): number {
 // Modificar el array de artículos para incluir el nuevo artículo
 export const articles: Article[] = [
   {
+    slug: "sexto-desafio-cerro-lago-oportunidad-potenciar-marca",
+    title: "6° Desafío Cerro y Lago: Una oportunidad para potenciar tu marca y apoyar el deporte local",
+    date: "12 de octubre de 2025",
+    category: "EVENTOS DEPORTIVOS",
+    author: "Equipo de Comunicación ACTyA",
+    readTime: "4 minutos",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/desafio-lago-vdd.jpg-LoSQsmNuvI0OvAP2gtjexDRrQrKqGp.jpeg",
+    content: `
+<p>En Villa del Dique se prepara una nueva edición del <strong>Desafío Cerro y Lago</strong>, un evento que combina deporte, comunidad y desarrollo regional en un entorno natural único. Esta competencia no solo convoca a apasionados del ciclismo, sino que también se ha convertido en un espacio estratégico para que marcas y comercios locales y regionales puedan ganar visibilidad y asociarse a valores como el esfuerzo, la superación y el trabajo en equipo.</p>
+
+<div class="my-8">
+  <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/desafio-lago-vdd.jpg-LoSQsmNuvI0OvAP2gtjexDRrQrKqGp.jpeg" alt="Poster oficial del 6° Desafío Cerro y Lago 2025" class="w-full rounded-xl max-h-[500px] object-contain mx-auto" />
+</div>
+
+<h2>¿Por qué ser sponsor?</h2>
+
+<p>Convertirse en sponsor oficial del Desafío Cerro y Lago es mucho más que colocar un logo: es estar presente en un evento de alto impacto, acompañando a una comunidad que vive y respira el deporte al aire libre. La participación como patrocinador brinda la oportunidad de mostrar compromiso con el crecimiento local y de vincularse con un evento de referencia en la región.</p>
+
+<h2>Beneficios para las marcas participantes</h2>
+
+<p>Los sponsors oficiales obtendrán presencia de su logo en el fondo de prensa oficial (utilizado como espacio de fotos post inscripción), así como alta visibilidad digital mediante fotografías compartidas en redes sociales (Instagram y Facebook).</p>
+
+<p>Además, recibirán menciones en vivo por el locutor oficial durante el evento y la asociación directa con un acontecimiento deportivo de relevancia en todo Calamuchita.</p>
+
+<div class="my-8">
+  <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/desafio-lago-sponsor.jpg-ITp5A8FqsvGwqQzrUs9CMwf8ga87zw.jpeg" alt="Sponsors que acompañan el Desafío Cerro y Lago" class="w-full rounded-xl max-h-[500px] object-contain mx-auto" />
+</div>
+
+<h2>Requisitos y participación</h2>
+
+<p>El valor del espacio publicitario es de <strong>$100.000</strong> e incluye la presencia visual y comunicacional antes y durante el evento. Los interesados deben enviar su logo en alta calidad para incluirlo en el diseño oficial y confirmar su participación antes de la fecha límite.</p>
+
+<p>El equipo organizador invita a todos a sumarse:</p>
+
+<blockquote class="border-l-4 border-primary pl-4 italic text-gray-700 my-6">
+  "Sumate al Desafío. Impulsá el deporte. Potenciá tu marca."
+</blockquote>
+
+<div class="my-8">
+  <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/desafio-lago-dNfNYVMyHxzt8DsD4jCGZD7dyWswMM.jpeg" alt="Logo oficial del 6° Desafío Cerro y Lago Villa del Dique" class="w-full rounded-xl max-h-[300px] object-contain mx-auto" />
+</div>
+
+<h2>Información de contacto</h2>
+
+<ul class="space-y-2">
+  <li><strong>📞 Contacto:</strong> <a href="https://wa.me/5493546402038" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary/80 font-medium">3546 – 402038</a></li>
+  <li><strong>📍 Ubicación:</strong> Villa del Dique – Córdoba</li>
+  <li><strong>📸 Instagram:</strong> <a href="https://www.instagram.com/desafiocerroylago" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary/80 font-medium">@desafiocerroylago</a></li>
+  <li><strong>📅 Fecha:</strong> 12 de octubre de 2025</li>
+</ul>
+
+<p>Este evento representa una excelente oportunidad para que las empresas locales y regionales se asocien con el deporte, la naturaleza y los valores que representa Villa del Dique como destino turístico y deportivo de excelencia.</p>
+
+<p>¡No pierdas la oportunidad de ser parte de esta gran celebración del deporte y la comunidad!</p>
+`,
+    tags: ["Deporte", "Ciclismo", "Sponsorship", "Eventos", "Villa del Dique", "Mountain Bike"],
+    relatedNews: [
+      "asociacion-impulsa-visibilidad-negocios-locales-carteleria",
+      "bienvenidos-asociacion-comercio-turismo",
+    ],
+  },
+  {
     slug: "asociacion-impulsa-visibilidad-negocios-locales-carteleria",
-    title: "La Asociación de Comercio impulsa la visibilidad de los negocios locales con nueva cartelería en los ingresos a Villa del Dique",
+    title:
+      "La Asociación de Comercio impulsa la visibilidad de los negocios locales con nueva cartelería en los ingresos a Villa del Dique",
     date: "8 de agosto de 2025",
     category: "COMUNICADOS DE PRENSA",
     author: "Equipo de Comunicación ACTyA",
     readTime: "4 minutos",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-08-08%20at%2010.27.03%20AM-J5RzM1ao0f9xYbWGAUUmQDm2vsmsLc.webp",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-08-08%20at%2010.27.03%20AM-J5RzM1ao0f9xYbWGAUUmQDm2vsmsLc.webp",
     content: `
 <p>La Asociación de Comercio, Turismo y Afines de Villa del Dique anunció la renovación de los carteles de ingreso a la localidad, ofreciendo a los comerciantes, emprendedores y prestadores de servicios un espacio publicitario exclusivo para promocionar sus negocios durante todo el año.</p>
 
-<p>Con esta iniciativa, buscamos potenciar la identidad comercial de Villa del Dique, generando mayor alcance para cada emprendimiento que decida sumarse, y asegurando que tanto visitantes como residentes identifiquen la oferta local desde el primer momento que ingresan a la localidad.</p>
+<p>Con esta iniciativa, buscamos potenciar la identidad comercial de Villa del Dique, generando mayor alcance para cada emprendimiento que decida sumarse, y asegurando que tanto visitantes como residentes identifiquen la oferta local desde el primer momento que ingresen a la localidad.</p>
 
 <div class="my-8">
   <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-08-08%20at%2010.27.03%20AM-J5RzM1ao0f9xYbWGAUUmQDm2vsmsLc.webp" alt="Cartel publicitario en ingreso a Villa del Dique con espacios para negocios locales" class="w-full rounded-xl max-h-[500px] object-contain mx-auto" />
